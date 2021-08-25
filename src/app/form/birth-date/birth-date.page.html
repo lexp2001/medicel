@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      4 de 8
+    </ion-title>
+    <ion-buttons slot="end">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-color">
+
+  <ion-card class="ion-margin">
+
+    <ion-card-header>
+      <ion-card-title>
+        Fecha de Nacimiento
+      </ion-card-title>
+
+      <ion-card-subtitle>
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input name="email" types="text" placeholder="Fecha de nacimiento">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </ion-input>
+
+        
+      </ion-item>
+
+
+
+      <!-- <div class="sign-btn-wrap">
+        <ion-button shape="round" fill="solid" class="sgn-btn">Siguiente</ion-button>
+  
+      </div> -->
+     
+    </ion-card-content>
+
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button href="age">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
