@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-street-address',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StreetAddressPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goComDomicile(){
+    this.router.navigate(['/com-domicile'])
+  }
 
   ngOnInit() {
   }

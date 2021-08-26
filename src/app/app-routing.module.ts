@@ -113,6 +113,10 @@ const routes: Routes = [
     path: 'publicity2',
     loadChildren: () => import('./screens/publicity2/publicity2.module').then( m => m.Publicity2PageModule)
   },
+  {
+    path: 'schedule',
+    loadChildren: () => import('./screens/schedule/schedule.module').then( m => m.SchedulePageModule)
+  },
 
  
   

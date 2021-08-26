@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-assist-control',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssistControlPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goQuestion1(){
+    this.router.navigate(['/question1'])
+  }
 
   ngOnInit() {
   }
