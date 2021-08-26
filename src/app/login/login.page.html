@@ -6,6 +6,7 @@
 <ion-content padding class="background">
   <ion-card class="ion-no-margin">
     <ion-img src="assets/images/header.svg"></ion-img>
+    <ion-img src="assets/images/logo-medicel.png" style="position: absolute; top: -0;left: 20px; max-width: 50%;"></ion-img>
     <ion-card-header>
       <ion-card-title>
         Bienvenido
@@ -19,11 +20,11 @@
 
     <ion-card-content>
       <div class="signin-btns">
-       <ion-button href="loginscreen" size="small" fill="solid" shape="round" >
+       <ion-button (click)="goLoginscreen()" size="small" fill="solid" shape="round" >
         Entrar
        </ion-button>
-       <ion-button href="singup" size="small" fill="outline" shape="round">
-         Resgistro
+       <ion-button (click)="goEmail()" size="small" fill="outline" shape="round">
+         Registro
        </ion-button>
       </div>
 

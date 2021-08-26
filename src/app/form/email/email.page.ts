@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-email',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goName(){
+    this.router.navigate(['/name'])
+  }
 
   ngOnInit() {
   }

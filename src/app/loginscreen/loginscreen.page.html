@@ -4,7 +4,7 @@
   </ion-toolbar>
 
   <ion-buttons slot="start">
-    <ion-back-button defaulthref="login" text=""></ion-back-button>
+    <ion-back-button></ion-back-button>
   </ion-buttons>
 
 </ion-header>
@@ -34,7 +34,7 @@
       <ion-button href="forgotpassword" fill="clear" class="ion-no-padding">¿Olvidaste tu contraseña?</ion-button>
     </div>
     <div class="sign-btn-wrap">
-      <ion-button shape="round" fill="solid" class="sgn-btn">Entrar</ion-button>
+      <ion-button  (click)="navigate()" text="" shape="round" fill="solid" class="sgn-btn">Entrar</ion-button>
 
     </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-age',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgePage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goTelephone(){
+    this.router.navigate(['/telephone'])
+  }
+
 
   ngOnInit() {
   }
