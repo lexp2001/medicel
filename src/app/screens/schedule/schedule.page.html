@@ -4,7 +4,7 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>
-     Código QR
+    Agendamiento
     </ion-title>
     <ion-buttons slot="end">
         <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
@@ -12,13 +12,63 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="bg-color">
+<ion-content>
 
-  <ion-content padding>
-    <div class="center">
-      <ion-img src="assets/images/maywhite.png"></ion-img>
-      </div>   
-      <h2>Andrés Mallea</h2>
-      <h5>153391653</h5> 
+  <ion-segment [(ngModel)]="calendar.mode">
+    <ion-segment-button value="month">
+      <ion-label>Month</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="week">
+      <ion-label>Week</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="day">
+      <ion-label>Day</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="createRandomEvents()" expand="block" fill="outline">
+        Add random events
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-button (click)="removeEvents()" expand="block" fill="outline">
+      Remove all events
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+
+    <!--Move back one screen of the slides-->
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="8" class="ion-text-center">
+      <h2>{{ viewTitle }}</h2>
+    </ion-col>
+
+    <!--Move forward one screen of the slides-->
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <calendar
+  [eventSource]="eventSource"
+  [calendarMode]="calendar.mode"
+  [currentDate]="calendar.currentDate"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  >
+  </calendar>
 </ion-content>
 
