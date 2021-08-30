@@ -116,7 +116,11 @@ const routes: Routes = [
   {
     path: 'schedule',
     loadChildren: () => import('./screens/schedule/schedule.module').then( m => m.SchedulePageModule)
+  },  {
+    path: 'cal-modal',
+    loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
   },
+
 
  
   
