@@ -11,7 +11,9 @@ export class PersonalInformationPage implements OnInit {
   constructor(private router: Router) { }
 
   goTab1(){
-    this.router.navigate(['/tabs/tab1'])
+    //this.router.navigate(['/tabs/tab1'])
+    this.router.navigate(['/publicity'])
+    
   }
 
   ngOnInit() {
