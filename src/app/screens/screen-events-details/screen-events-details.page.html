@@ -3,68 +3,87 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>
-     
-    </ion-title>
+    <ion-text>
+  
+    </ion-text>
     <ion-buttons slot="end">
         <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="bg-color">
+<ion-content>
+  <ion-content fullscreen>
+    <div class="div-container-event">
+      <ion-text class="texts-divs">Jai lorena</ion-text>
+      <div class="div-event">
+        <ion-item > 
+          <ion-icon name="barbell-outline" slot="start"></ion-icon>
+          <ion-label >
+            <h2>Fussion Fit</h2>
+            <h3>15:00</h3>
+            <p >Las Rosas</p>
+          </ion-label>
+        </ion-item>
+      </div>
+    </div>
+   
+    <div style="margin-top: 30px;">
+    <ion-text  class="texts-divs">Jai, jaguaryu</ion-text>
+    <ion-grid>
+   
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-item>
+              <ion-label >
+               
+                <h2>Asistentes</h2>
+                <h3>5555</h3>
+                <ion-icon name="barbell-outline" slot="end"></ion-icon>
+              </ion-label>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-item>
+              <ion-label >
+                <h2>Confirmados</h2>
+                <h3>5555</h3>
+              </ion-label>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
 
-  <ion-list>
-    <ion-item>
-      <ion-label>
-        <h5>Nombre del Evento:</h5>
-        <h2>Fussion Fit</h2>
-      </ion-label>
-    </ion-item>
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-item>
+              <ion-label >
+                <h2>Vacunados</h2>
+                <h3>5555</h3>
+              </ion-label>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-item>
+              <ion-label >
+                <h2>Testeo</h2>
+                <h3>5555</h3>
+              </ion-label>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
 
-    <ion-item>
-      <ion-label>
-        <h5>Hora:</h5>
-        <h2>15:00</h2>
-      </ion-label>
-      
-    </ion-item>
- 
-
-    <ion-item>
-      <ion-label>
-        <h5>Dirección:</h5>
-        <h2>Las Rosas</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <h5>Aforo</h5>
-        <h2>35 asistentes</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <h5>Personas confirmadas</h5>   
-        <h2>28 confirmadas</h2>
-      </ion-label>
-    </ion-item>
-
-
-    <ion-item>
-      <ion-label>
-        <h5>Condiciones de los asistentes al evento:</h5>     
-        <h2>72% vacunados,  28% testeo</h2>
-      </ion-label>
-    </ion-item>
-
-
-  </ion-list>
-  <ion-item>
-    <ion-label>Notificar</ion-label>
-    <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
-  </ion-item>
+    
+    </ion-grid>
+  </div>
 
 </ion-content>
+
+
