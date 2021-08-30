@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-publicity',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicityPage implements OnInit {
 
-  constructor() { }
+  public counter = 10 
+
+  constructor(private router: Router) { }
+
 
   ngOnInit() {
+
+    console.info("Set init")
+
+    var i = setInterval(t =>{ 
+      this.counter--; 
+      console.info(this.counter)
+      if(this.counter==0) {
+        clearInterval(i);
+        this.router.navigate(['tabs/tab1'])
+      }
+    }, 1000);
+
+    
+
   }
 
 }
