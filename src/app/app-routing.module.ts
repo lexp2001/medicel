@@ -49,43 +49,35 @@ const routes: Routes = [
   },
   {
     path: 'question1',
-    loadChildren: () => import('./questions/question1/question1.module').then( m => m.Question1PageModule)
+    loadChildren: () => import('./questions/questionnaire/question1/question1.module').then( m => m.Question1PageModule)
   },
   {
     path: 'question2',
-    loadChildren: () => import('./questions/question2/question2.module').then( m => m.Question2PageModule)
+    loadChildren: () => import('./questions/questionnaire/question2/question2.module').then( m => m.Question2PageModule)
   },
   {
     path: 'question3',
-    loadChildren: () => import('./questions/question3/question3.module').then( m => m.Question3PageModule)
+    loadChildren: () => import('./questions/questionnaire/question3/question3.module').then( m => m.Question3PageModule)
   },
   {
     path: 'question4',
-    loadChildren: () => import('./questions/question4/question4.module').then( m => m.Question4PageModule)
-  },
-  {
-    path: 'question6',
-    loadChildren: () => import('./questions/question6/question6.module').then( m => m.Question6PageModule)
-  },
-  {
-    path: 'question7',
-    loadChildren: () => import('./questions/question7/question7.module').then( m => m.Question7PageModule)
+    loadChildren: () => import('./questions/questionnaire/question4/question4.module').then( m => m.Question4PageModule)
   },
   {
     path: 'question8',
-    loadChildren: () => import('./questions/question8/question8.module').then( m => m.Question8PageModule)
+    loadChildren: () => import('./questions/covid-19/question8/question8.module').then( m => m.Question8PageModule)
   },
   {
     path: 'question9',
-    loadChildren: () => import('./questions/question9/question9.module').then( m => m.Question9PageModule)
+    loadChildren: () => import('./questions/covid-19/question9/question9.module').then( m => m.Question9PageModule)
   },
   {
     path: 'question10',
-    loadChildren: () => import('./questions/question10/question10.module').then( m => m.Question10PageModule)
+    loadChildren: () => import('./questions/covid-19/question10/question10.module').then( m => m.Question10PageModule)
   },
   {
     path: 'question5',
-    loadChildren: () => import('./questions/question5/question5.module').then( m => m.Question5PageModule)
+    loadChildren: () => import('./questions/questionnaire/question5/question5.module').then( m => m.Question5PageModule)
   },
   {
     path: 'personal-information',
@@ -107,7 +99,7 @@ const routes: Routes = [
   },
   {
     path: 'assist-control',
-    loadChildren: () => import('./questions/assist-control/assist-control.module').then( m => m.AssistControlPageModule)
+    loadChildren: () => import('./questions/questionnaire/assist-control/assist-control.module').then( m => m.AssistControlPageModule)
   },
   {
     path: 'publicity2',
@@ -116,10 +108,28 @@ const routes: Routes = [
   {
     path: 'schedule',
     loadChildren: () => import('./screens/schedule/schedule.module').then( m => m.SchedulePageModule)
-  },  {
+  },
+  {
     path: 'cal-modal',
     loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
   },
+  {
+    path: 'upload-photo',
+    loadChildren: () => import('./screens/upload-photo/upload-photo.module').then( m => m.UploadPhotoPageModule)
+  },
+  {
+    path: 'questionnaire-details',
+    loadChildren: () => import('./questions/questionnaire/questionnaire-details/questionnaire-details.module').then( m => m.QuestionnaireDetailsPageModule)
+  },
+  {
+    path: 'covid19-details',
+    loadChildren: () => import('./questions/covid-19/covid19-details/covid19-details.module').then( m => m.Covid19DetailsPageModule)
+  },  {
+    path: 'graphs',
+    loadChildren: () => import('./screens/graphs/graphs.module').then( m => m.GraphsPageModule)
+  },
+
+
 
 
  
