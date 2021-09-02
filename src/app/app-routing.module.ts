@@ -124,7 +124,11 @@ const routes: Routes = [
   {
     path: 'covid19-details',
     loadChildren: () => import('./questions/covid-19/covid19-details/covid19-details.module').then( m => m.Covid19DetailsPageModule)
+  },  {
+    path: 'chart',
+    loadChildren: () => import('./chart/chart.module').then( m => m.ChartPageModule)
   }
+
  
 ];
 @NgModule({
