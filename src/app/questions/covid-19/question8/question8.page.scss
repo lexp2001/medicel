@@ -20,7 +20,7 @@ ion-card-title{
 
 ion-card-subtitle{
     text-align: start;
-    padding-top: 10px !important;
+    padding-top: 5px !important;
     font-size: 13px;
     color: #888C91;
     font-weight: 400;
@@ -29,7 +29,7 @@ ion-card-subtitle{
 }
 
 ion-item{
-    padding-top: 10px;
+    padding-top: px;
     color:#74787E;
     --border-color: #D4D7DB; 
     --highlight-color-focussed: #215AB7;
@@ -50,19 +50,3 @@ ion-input:hover{
 }
 
 }
-
-.sign-btn-wrap{
-    text-align: center;
-    padding-top: 30px;
-    .sign-btn{
-        --ion-primary-color: #215AB7;
-        --background:#215AB7;
-        --background-activated: #F4F6FA;
-        --background-focused: #E1EAF9;
-        color: #F4F6FA;
-        border-radius: 25px;
-      
-        background-color: #215AB7;
-    }
-}
-

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+     Código QR
+    </ion-title>
+    <ion-buttons slot="end">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+  <ion-content padding>
+
+    <ion-card>
+    <div class="center">
+      <ion-img src="assets/images/upload-photo.png"></ion-img>
+      </div>  
+
+      
+    <div class="upload-pass">
+      <ion-button fill="clear">Click aquí para subir <br>su pase de movilidad</ion-button>
+    </div>
+
+
+    </ion-card>
+
+    <div class="sign-btn-wrap">
+      <ion-button   text="" shape="round" fill="solid" class="sgn-btn">Subir Pase</ion-button>
+      <!-- (click)="navigate()" -->
+    </div>
+    
+</ion-content>
