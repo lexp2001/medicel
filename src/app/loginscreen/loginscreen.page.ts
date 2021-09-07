@@ -11,7 +11,7 @@ export class LoginscreenPage implements OnInit {
   constructor(private router: Router) { }
 
   navigate(){
-    this.router.navigate(['/tabs/tab1'])
+    this.router.navigate(['/tabs/home'])
   }
 
   ngOnInit() {

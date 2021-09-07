@@ -22,7 +22,7 @@ export class PublicityPage implements OnInit {
       console.info(this.counter)
       if(this.counter==0) {
         clearInterval(i);
-        this.router.navigate(['tabs/tab1'])
+        this.router.navigate(['tabs/home'])
       }
     }, 1000);
 
