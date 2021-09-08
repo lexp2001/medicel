@@ -4,6 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+    //loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'main',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
 
@@ -30,10 +36,6 @@ const routes: Routes = [
   {
     path: 'birth-date',
     loadChildren: () => import('./form/birth-date/birth-date.module').then( m => m.BirthDatePageModule)
-  },
-  {
-    path: 'age',
-    loadChildren: () => import('./form/age/age.module').then( m => m.AgePageModule)
   },
   {
     path: 'telephone',
@@ -124,7 +126,8 @@ const routes: Routes = [
   {
     path: 'covid19-details',
     loadChildren: () => import('./questions/covid-19/covid19-details/covid19-details.module').then( m => m.Covid19DetailsPageModule)
-  },  {
+  },
+  {
     path: 'chart',
     loadChildren: () => import('./chart/chart.module').then( m => m.ChartPageModule)
   }
