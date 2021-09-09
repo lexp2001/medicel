@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload-photo',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadPhotoPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router)  { }
+
+  goPersonalInformation(){
+    this.router.navigate(['/personal-information'])
+  }
 
   ngOnInit() {
   }

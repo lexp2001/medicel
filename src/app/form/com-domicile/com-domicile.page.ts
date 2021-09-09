@@ -10,8 +10,8 @@ export class ComDomicilePage implements OnInit {
 
   constructor(private router: Router) { }
 
-  goPersonalInformation(){
-    this.router.navigate(['/personal-information'])
+  goUpload(){
+    this.router.navigate(['/upload-photo'])
   }
 
   ngOnInit() {
