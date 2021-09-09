@@ -7,13 +7,16 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { SwiperModule} from 'swiper/angular'
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SwiperModule
   ],
   declarations: [HomePage]
 })
