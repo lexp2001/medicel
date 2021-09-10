@@ -13,5 +13,8 @@ export class EventsPage {
   goAssistControl(){
     this.router.navigate(['/assist-control'])
   }
+  goHome(){
+    this.router.navigate(['/main/home'])
+  }
 
 }

@@ -14,6 +14,10 @@ export class AssistControlPage implements OnInit {
     this.router.navigate(['/question1'])
   }
 
+  goHome(){
+    this.router.navigate(['/main/home'])
+  }
+
   ngOnInit() {
   }
 

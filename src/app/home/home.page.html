@@ -27,25 +27,42 @@
           <ion-icon name="calendar-outline"></ion-icon>20 de Julio, 2021
         </p>
         <p>
-          <ion-icon name="map-outline"></ion-icon>Camino las rosas
+          <ion-icon name="map-outline"></ion-icon>Avenida las rosas
         </p>
         <ion-buttons>
           <ion-button color="primary">Reservar</ion-button>
           <ion-button color="secondary">Detalles</ion-button>
         </ion-buttons>
 
+      </ion-card>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <ion-card>
+        <img src="assets/images/pizz2.jpg">
+        <ion-text>Pizza Don Fede</ion-text>
+        <p>
+          <ion-icon name="calendar-outline"></ion-icon>28 de Julio, 2021
+        </p>
+        <p>
+          <ion-icon name="map-outline"></ion-icon>Centro Cultural tec
+        </p>
+        <ion-buttons>
+          <ion-button color="primary">Reservar</ion-button>
+          <ion-button color="secondary">Detalles</ion-button>
+        </ion-buttons>
       </ion-card>
     </ng-template>
 
     <ng-template swiperSlide>
       <ion-card>
         <img src="assets/images/books.jpg">
-        <ion-text>Conferencia Ambiental</ion-text>
+        <ion-text>Incentivando la lectura</ion-text>
         <p>
-          <ion-icon name="calendar-outline"></ion-icon>20 de Julio, 2021
+          <ion-icon name="calendar-outline"></ion-icon>28 de Julio, 2021
         </p>
         <p>
-          <ion-icon name="map-outline"></ion-icon>Camino las rosas
+          <ion-icon name="map-outline"></ion-icon>Calle Huelen 309
         </p>
         <ion-buttons>
           <ion-button color="primary">Reservar</ion-button>
@@ -56,13 +73,13 @@
 
     <ng-template swiperSlide>
       <ion-card>
-        <img src="assets/images/world.jpg">
-        <ion-text>Conferencia Ambiental</ion-text>
+        <img src="assets/images/corrida.jpg">
+        <ion-text>Carrera 20km</ion-text>
         <p>
-          <ion-icon name="calendar-outline"></ion-icon>20 de Julio, 2021
+          <ion-icon name="calendar-outline"></ion-icon>03 de Agosto, 2021
         </p>
         <p>
-          <ion-icon name="map-outline"></ion-icon>Camino las rosas
+          <ion-icon name="map-outline"></ion-icon>Avenida Blanco Encalada
         </p>
         <ion-buttons>
           <ion-button color="primary">Reservar</ion-button>
@@ -71,44 +88,36 @@
       </ion-card>
     </ng-template>
   </swiper>
-  <div>
-    <ion-title>Mis eventos</ion-title>
+
+  <div class="my-events">
+    <ion-title>Mis eventos Agendados</ion-title>
   </div>
 
   <ion-list>
     <ion-item>
       <ion-thumbnail>
-        <ion-img src="assets/images/world.jpg"></ion-img>
+        <ion-img src="assets/images/festival.jpg"></ion-img>
       </ion-thumbnail>
       <ion-text>
-        <p>27 Jun 2021</p>
-        <p>Festival de Música</p>
-        <p>Camino las rosas</p>
+        <p>08 de Agosto, 2021</p>
+        <p class="p-event-name">Festival de Música Electronica</p>
+        <p>
+          <ion-icon name="map-outline"></ion-icon>Calle Merced 61
+        </p>
       </ion-text>
     </ion-item>
   </ion-list>
   <ion-list>
     <ion-item>
       <ion-thumbnail>
-        <ion-img src="assets/images/world.jpg"></ion-img>
+        <ion-img src="assets/images/setembro.jpg"></ion-img>
       </ion-thumbnail>
       <ion-text>
-        <p>27 Jun 2021</p>
-        <p>Festival de Música</p>
-        <p>Camino las rosas</p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail>
-        <ion-img src="assets/images/world.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p>27 Jun 2021</p>
-        <p>Festival de Música</p>
-        <p>Camino las rosas</p>
+        <p>27 de Agosto 2021</p>
+        <p class="p-event-name">Restaurante Yakitoro</p>
+        <p>
+          <ion-icon name="map-outline"></ion-icon>Av. Arturo Prat
+        </p>
       </ion-text>
     </ion-item>
   </ion-list>
@@ -116,12 +125,29 @@
   <ion-list>
     <ion-item>
       <ion-thumbnail>
-        <ion-img src="assets/images/world.jpg"></ion-img>
+        <ion-img src="assets/images/futbol.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p>05 de Septiembre 2021</p>
+        <p class="p-event-name">Campeonato Chileno</p>
+        <p>
+          <ion-icon name="map-outline"></ion-icon>Calle Huelen 309
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/pizza.jpg"></ion-img>
       </ion-thumbnail>
       <ion-text>
         <p>27 Jun 2021</p>
-        <p>Festival de Música</p>
-        <p>Camino las rosas</p>
+        <p class="p-event-name">Pizza's Luiggi</p>
+        <p>
+          <ion-icon name="map-outline"></ion-icon>Caupolican 502
+        </p>
       </ion-text>
     </ion-item>
   </ion-list>

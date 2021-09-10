@@ -68,6 +68,40 @@ swiper {
     }
 }
 
+ion-list{
+    margin: 0px 10px !important;
+    ion-thumbnail{
+        height: 80px;
+    }
+
+    p{
+        font-size: 0.9em;
+       
+        color: gray;
+        margin-left: 20px;
+        margin-block-start: 10px !important;
+        margin-block-end: 10px !important;
+        
+        ion-icon {
+            color: gray;
+            font-size: 1.3em;
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+.p-event-name{
+    font-weight: 500;
+    font-size: 1em;
+    color: var(--ion-color-primary);
+}
+
+.my-events{
+    margin: 15px 0px;
+    color: gray;
+}
 
 
 
