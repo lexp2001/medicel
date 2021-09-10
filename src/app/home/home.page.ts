@@ -14,7 +14,7 @@ export class HomePage implements AfterContentChecked{
 
   config: SwiperOptions = {
     slidesPerView: 2,
-    spaceBetween: 50,
+    spaceBetween: 20,
     pagination: true
   };
   constructor() {}
