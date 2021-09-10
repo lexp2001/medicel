@@ -10,10 +10,8 @@ export class PersonalInformationPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  goHome(){
-    //this.router.navigate(['/tabs/home'])
-    this.router.navigate(['/publicity'])
-    
+  goHome() {
+    this.router.navigate(['main/home'])
   }
 
   ngOnInit() {

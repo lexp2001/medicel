@@ -13,7 +13,9 @@ export class Question9Page implements OnInit {
   goQuestion10(){
     this.router.navigate(['/question10'])
   }
-
+  goHome(){
+    this.router.navigate(['/main/home'])
+  }
   ngOnInit() {
   }
 

@@ -11,8 +11,9 @@ export class Question10Page implements OnInit {
   constructor(private router: Router) { }
 
   goHome() {
-    this.router.navigate(['tabs/home'])
+    this.router.navigate(['main/home'])
   }
+  
 
   ngOnInit() {
   }
