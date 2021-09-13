@@ -1,0 +1,106 @@
+.event-name, .organizer, .widgets{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+ion-title {
+    color: gray;
+    font-weight: 400;
+}
+
+.event-name, .organizer{
+    button{
+        margin-top: 10px;
+        width: 140px;
+        height: 40px;
+        border-radius: 10px;
+        color: #215AB7;
+        font-size: 1.1pc;
+
+    }
+}
+
+.about{
+    p, button{
+        margin-left: 20px;
+    }
+    .button-read{
+        color: #215AB7;
+        font-size: 0.9em;
+        font-weight: 900;
+    }
+}
+
+p{
+    margin-block-start: 0.3em;
+    margin-block-end: 0em;
+    color: rgb(83, 83, 83);
+}
+
+.div-date{
+    width: 50px;
+    border-radius: 10px;
+   background-color: #215AB7;
+   color: white;
+   display: flex;
+   justify-content: center;
+
+   p{
+       color: white !important;
+   }
+}
+
+.div-organized-logo{
+    width: 50px;
+    border-radius: 50px;
+   background-color: #12C98B;
+   display: flex;
+   justify-content: center;
+
+   p{
+   color: white !important;
+}
+}
+
+.widgets{
+    div{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+
+    p{
+        text-align: center;
+    }
+}
+
+}
+
+.div-red{
+    border: solid 1px #F66D6D;
+}
+
+.div-blue{
+    border: solid 1px #216AA8; 
+}
+
+.div-green{
+    border: solid 1px #29B41A; 
+}
+
+
+.p-red{
+    color:#F66D6D;
+    font-size: 2pc;
+}
+
+.p-blue{
+    color: #216AA8;
+    font-size: 2pc;
+}
+
+.p-green{
+    color: #29B41A;
+    font-size: 2pc;
+
+}
