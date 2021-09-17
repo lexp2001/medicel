@@ -1,4 +1,5 @@
 import { AfterContentChecked, Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
@@ -17,12 +18,18 @@ export class HomePage implements AfterContentChecked{
     spaceBetween: 20,
     pagination: true
   };
-  constructor() {}
+  constructor(private router: Router) {}
+
+  goEventsDetails() {
+    this.router.navigate(['main/events/events-details'])
+  }
 
   ngAfterContentChecked(){
     if (this.swiper) {
       this.swiper.updateSwiper({});
     }
-  }
+  } 
 
 }
+
+

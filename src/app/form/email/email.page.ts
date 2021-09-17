@@ -14,6 +14,10 @@ export class EmailPage implements OnInit {
     this.router.navigate(['/name'])
   }
 
+  goLogin(){
+    this.router.navigate(['/login'])
+  }
+
   ngOnInit() {
   }
 

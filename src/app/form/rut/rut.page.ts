@@ -13,7 +13,10 @@ export class RutPage implements OnInit {
   goBirthDate(){
     this.router.navigate(['/birth-date'])
   }
-
+  
+  goLogin(){
+    this.router.navigate(['/login'])
+  }
 
   ngOnInit() {
   }

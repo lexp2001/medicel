@@ -13,11 +13,11 @@ declare var google;
 export class EventsDetailsPage implements OnInit {
 
   constructor(
-    private router: Router,
-    private geolocation: Geolocation,
-    private loadingCtrl: LoadingController) { 
+    private router: Router){}
+    // private geolocation: Geolocation,
+    // private loadingCtrl: LoadingController) { 
      
-    }
+    
 
 
   goHome(){
@@ -25,35 +25,36 @@ export class EventsDetailsPage implements OnInit {
   }
 
   ngOnInit() {
-    this.loadMap();
+    // this.loadMap();
   }
 
-  async loadMap(){
-    const loading = await this.loadingCtrl.create();
-    loading.present();
-    const rta = await this.geolocation.getCurrentPosition();
-    const myLatLng = {
-      lat: rta.coords.latitude,
-      lng: rta.coords.longitude
-    };
-    const mapEle: HTMLElement = document.getElementById('map');
-    const map = new google.maps.Map(mapEle, {
-      center: myLatLng,
-      zoom: 12
-    });
-    google.maps.EventsDetailsPage
-    .addListenerOnce(map, 'idle', () => {
-     loading.dismiss();
-     const marker = new google.maps.Marker({
-       position:{
-         lat: myLatLng.lat,
-         lng: myLatLng.lng
-       },
-       map: map,
-       title: 'Hello World'
-     });
-    });
+  // async loadMap(){
+  //   const loading = await this.loadingCtrl.create();
+  //   loading.present();
+  //   const rta = await this.geolocation.getCurrentPosition();
+  //   const myLatLng = {
+  //     lat: rta.coords.latitude,
+  //     lng: rta.coords.longitude
+  //   };
+  //   console.log(myLatLng);
+  //   const mapEle: HTMLElement = document.getElementById('map');
+  //   const map = new google.maps.Map(mapEle, {
+  //     center: myLatLng,
+  //     zoom: 12
+  //   });
+  //   google.maps.EventsDetailsPage
+  //   .addListenerOnce(map, 'idle', () => {
+  //    loading.dismiss();
+  //    const marker = new google.maps.Marker({
+  //      position:{
+  //        lat: myLatLng.lat,
+  //        lng: myLatLng.lng
+  //      },
+  //      map: map,
+  //      title: 'Hello World'
+  //    });
+  //   });
    
-  }
+  // }
 
 }

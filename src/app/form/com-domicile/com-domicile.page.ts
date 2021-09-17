@@ -13,7 +13,9 @@ export class ComDomicilePage implements OnInit {
   goUpload(){
     this.router.navigate(['/upload-photo'])
   }
-
+  goLogin(){
+    this.router.navigate(['/login'])
+  }
   ngOnInit() {
   }
 

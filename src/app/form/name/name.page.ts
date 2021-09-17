@@ -13,6 +13,10 @@ export class NamePage implements OnInit {
   goRut(){
     this.router.navigate(['/rut'])
   }
+  
+  goLogin(){
+    this.router.navigate(['/login'])
+  }
 
   ngOnInit() {
   }

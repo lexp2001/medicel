@@ -13,7 +13,9 @@ export class BirthDatePage implements OnInit {
   goAge(){
     this.router.navigate(['/telephone'])
   }
-
+  goLogin(){
+    this.router.navigate(['/login'])
+  }
   ngOnInit() {
   }
 

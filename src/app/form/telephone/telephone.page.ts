@@ -14,6 +14,10 @@ export class TelephonePage implements OnInit {
     this.router.navigate(['/street-address'])
   }
 
+  goLogin(){
+    this.router.navigate(['/login'])
+  }
+
   ngOnInit() {
   }
 
