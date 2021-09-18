@@ -14,4 +14,7 @@ export class TesteoPage {
     this.router.navigate(['/main/home'])
   }
 
+  goTypesOfTests(){
+    this.router.navigate(['/main/testeo/types-of-tests'])
+  }
 }

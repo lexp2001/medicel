@@ -21,7 +21,7 @@ export class HomePage implements AfterContentChecked{
   constructor(private router: Router) {}
 
   goEventsDetails() {
-    this.router.navigate(['main/events/events-details'])
+    this.router.navigate(['/events/events-details'])
   }
 
   ngAfterContentChecked(){

@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goTesteo()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-list class="list">
+
+
+    <ion-item>
+      <ion-icon name="heart-circle-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Prueba PCR</h2>
+        <h5>Es la prueba de mayor fiabilidad en cuanto a la detección del Coronavirus. Su función es detectar la
+          infección activa del Covid-19 a través de una muestra con un bastoncillo introducido en las fosas nasales o en
+          la garganta. Esta muestra se envía al laboratorio para su examinación pudiendo durar varias horas.</h5>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="goDate()">
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="heart-circle-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Test de antígenos covid-19</h2>
+        <h5> Esta prueba detecta una proteína que se encuentra presente en el virus. Lo más llamativo del test de
+          antígenos es su rapidez, ya que en tan solo 15 o 20 minutos obtendremos los resultados.</h5>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="goDate()">
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="heart-circle-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Test de Autodiagnóstico de Antígenos Covid-19 Boson Biotech</h2>
+        <h5>Prueba para detección del covid, fácil de usar y con resultados rápidos en tan solo 15 minutos.</h5>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="goDate()">
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+
+  </ion-list>
+
+
+</ion-content>
