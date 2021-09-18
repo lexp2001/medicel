@@ -14,6 +14,39 @@ export class PersonalInformationPage implements OnInit {
     this.router.navigate(['main/home'])
   }
 
+  goName() {
+    this.router.navigate(['name'])
+  }
+
+
+  goRut() {
+    this.router.navigate(['rut'])
+  }
+
+  goEmail() {
+    this.router.navigate(['email'])
+  }
+
+  goBirthdate() {
+    this.router.navigate(['birth-date'])
+  }
+
+  goTelephone() {
+    this.router.navigate(['telephone'])
+  }
+
+  goStreetAddress() {
+    this.router.navigate(['street-address'])
+  }
+
+
+  goComDomicile() {
+    this.router.navigate(['com-domicile'])
+  }
+
+
+ 
+
   ngOnInit() {
   }
 

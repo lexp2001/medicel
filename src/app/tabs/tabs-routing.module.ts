@@ -1,3 +1,4 @@
+import { PersonalInformationPage } from './../form/personal-information/personal-information.page';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -12,8 +13,8 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'events',
-        loadChildren: () => import('../events/events.module').then(m => m.EventsPageModule)
+        path: 'personalInformation',
+        loadChildren: () => import('../form/personal-information/personal-information.module').then(m => m.PersonalInformationPageModule)
       },
       {
         path: 'testeo',
