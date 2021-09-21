@@ -17,6 +17,10 @@ const routes: Routes = [
         loadChildren: () => import('../form/personal-information/personal-information.module').then(m => m.PersonalInformationPageModule)
       },
       {
+        path: 'events',
+        loadChildren: () => import('../events/events.module').then(m => m.EventsPageModule)
+      },
+      {
         path: 'testeo',
         loadChildren: () => import('../testeo/testeo.module').then(m => m.TesteoPageModule)
       },
