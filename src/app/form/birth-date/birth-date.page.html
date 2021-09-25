@@ -31,7 +31,11 @@
       <ion-item>
         
         <ion-label position="floating">DD/MM/YYYY</ion-label>
-        <ion-datetime displayFormat="DD/MM/YYYY" min="1900-03-14" max="2020-12-09">
+        <ion-datetime 
+            displayFormat="DD/MM/YYYY" 
+            min="1900-03-14" 
+            max="2020-12-09"
+            [(ngModel)]="participant.birthday">
         </ion-datetime>
       </ion-item>
     </ion-card-content>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ParticipantService } from '../../services/participant.service'
 
 @Component({
   selector: 'app-rut',
@@ -8,7 +9,12 @@ import { Router } from '@angular/router';
 })
 export class RutPage implements OnInit {
 
-  constructor(private router: Router) { }
+  participant: any
+
+  constructor(
+    private router: Router,
+    private participantService: ParticipantService
+    ) { }
 
   goBirthDate(){
     this.router.navigate(['/birth-date'])
@@ -19,6 +25,8 @@ export class RutPage implements OnInit {
   }
 
   ngOnInit() {
+    this.participant = this.participantService
+    console.info(this.participant)
   }
 
 }
