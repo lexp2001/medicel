@@ -1,0 +1,97 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      3 de 3
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button  (click)="goHome()">
+        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-color">
+
+  <ion-card class="ion-margin">
+<!-- 
+    <ion-card-header>
+      <ion-card-title>
+        Control Acceso
+      </ion-card-title>
+      <ion-card-subtitle>
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </ion-card-subtitle>
+    </ion-card-header> -->
+
+    <ion-list>
+      <ion-radio-group value="biff">
+
+        <div>
+          <h4>Respecto de la asistencia y uso de las instalaciones</h4>
+          <p>• En este acto declaro que jugaré el partido de acuerdo con las normas y protocolos sanitarios que
+            establece el club. He leído y entendido las reglas implementadas por el Covid-19 y me obligo a cumplirlos y
+            respetarlos</p>
+          <p>• Estoy en conocimiento que los protocolos están diseñados para minimizar los riesgos de contagio del
+            Covid-19, pero en ningún caso garantiza totalmente los riesgos de contagio</p>
+          <p>• Declaro que, aunque el centro deportivo aplique todas las medidas necesarias para evitar el contagio del
+            Covid-19, igualmente podría contraer el virus por la irresponsabilidad de algún otro deportista</p>
+        </div>
+
+        <div>
+          <h4>Respecto de mi Declaración de Residencia</h4>
+          <p>• Declaro residir en comuna de xxxx</p>
+        </div>
+
+        <div>
+          <h4>Respecto de mi Declaración de Salud</h4>
+          <p>• Aseguro que no tengo Covid-19 ni he presentado síntomas (fiebre -temperatura corporal de 37,8 °C o más-;
+            tos; disnea o dificultad respiratoria; dolor torácico; odinofagia o dolor de garganta al comer o tragar
+            fluidos; mialgias o dolores musculares; escalofríos; cefalea o dolor de cabeza; diarrea; pérdida brusca del
+            olfato o anosmia; pérdida brusca del gusto o ageusia) ni tampoco he tenido contacto estrecho con ninguna
+            persona confirmada con esta enfermedad, en el último mes.</p>
+          <p>• Declaro no tener una situación de salud que me exponga a un riesgo mayor en caso de contraer Covid-19
+            (diabetes, enfermedades respiratorias, hipertensión, problemas cardiovasculares, entre otras).</p>
+          <p>• No conozco ninguna norma o disposición de la autoridad que me obligue a estar en cuarentena en mi
+            domicilio.</p>
+          <p>• Asumo cualquier tipo de riego de contagio del Covid-19 y eximo de cualquier tipo de responsabilidad tanto
+            al lugar al cual asisto como a la aplicación utilizada.</p>
+          <p>• Autorizo expresamente al Instituto de Salud Pública, así como a cualquier médico, clínica, hospital,
+            laboratorio u otra institución de salud que puedan acreditar mi estado de salud “Libre de Covid-19”.</p>
+          <p>• En este acto otorgo mi consentimiento expreso y autorizo a que la aplicación pueda tener acceso a los
+            resultados y, en el caso de dar positivo, avisara a los otros asistentes que pudieron tener contacto
+            estrecho con un enfermo de Covid-19 (siempre salvaguardando la identidad), ya sea éste sintomático o
+            asintomático.</p>
+          <p>• Confirmo la exactitud y sinceridad de las declaraciones arriba expresadas. Nada he ocultado, omitido o
+            alterado y declaro conocer y aceptar, desde ya, que dichas declaraciones constituyen los elementos
+            indispensables para el correcto funcionamiento delreciento y la salud de todos quienes trabajan y utilizan
+            las instalaciones.</p>
+          <p>• Finalmente, declaro estar en conocimiento respecto de la gravedad de mentir en una Declaración Jurada.
+            Por tal motivo, acepto que el recinto -en caso de no ser efectivas las declaraciones aquí contenidas-
+            proceda tanto a mi expulsión definitiva de este lugar, como también que presente los antecedentes ante la
+            autoridad correspondiente e incluso en los Tribunales de Justicia.</p>
+          <p>• Esta declaración tiene carácter obligatorio y es absolutamente personal.</p>
+        </div>
+
+        <ion-item>
+          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+          <ion-label>Acepto este documento como <br> declaración jurada</ion-label>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+
+
+
+
+  </ion-card>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goHome()">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
