@@ -10,8 +10,8 @@ export class Covid1Page implements OnInit {
 
   constructor(private router: Router) { }
 
-  goQuestion9(){
-    this.router.navigate(['/question9'])
+  goCovid2(){
+    this.router.navigate(['/covid2'])
   }
 
   goHome(){

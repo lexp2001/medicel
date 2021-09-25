@@ -79,7 +79,7 @@ const routes: Routes = [
   },
   {
     path: 'sanform5',
-    loadChildren: () => import('./questions//sanform5/sanform5.module.module').then( m => m.SanForm5PageModule)
+    loadChildren: () => import('./questions/san-form/sanform5/sanform5.module').then( m => m.SanForm5PageModule)
   },
   {
     path: 'personal-information',
