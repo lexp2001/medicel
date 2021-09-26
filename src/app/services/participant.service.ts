@@ -88,9 +88,12 @@ export class ParticipantService {
   }
 
 
-    createParticipant(participant: ParticipantInterface): Observable<any> {
-      console.info("createParticipant, vamos a ver que me muestran")
-      return this.http.post<any>('https://medicelpro.azurewebsites.net/api/createparticipant' ,participant)
-    }
+  createParticipant(participant: ParticipantInterface): Observable<any> {
+    return this.http.post<any>('https://medicelpro.azurewebsites.net/api/createparticipant' ,participant)
+  }
+
+  getParticipantByRut(rut: string): Observable<any> {
+    return this.http.get<any>('https://medicelpro.azurewebsites.net/api/getParticipantByRut/' + rut )
+  }
 
 }
