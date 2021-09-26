@@ -13,7 +13,8 @@ import { PersonalInformationPage } from './personal-information.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PersonalInformationPageRoutingModule
+    PersonalInformationPageRoutingModule,
+
   ],
   declarations: [PersonalInformationPage]
 })

@@ -24,15 +24,15 @@
   </ion-toolbar>
 
 
-  <ion-card>
+  <ion-card style="margin-left:20px;">
 
-  <ion-list class="list">
+  <ion-list>
 
     <ion-item>
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Nombre y Apellido:</h5>
-        <h2>Andrés Mallea</h2>
+        <h2>{{participant.name}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goName()">
@@ -45,7 +45,7 @@
       <ion-icon name="tablet-landscape-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Rut:</h5>
-        <h2>153391653</h2>
+        <h2>{{participant.rut}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goRut()">
@@ -59,7 +59,7 @@
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Email:</h5>
-        <h2>amallea045@gmail.com</h2>
+        <h2>{{participant.email}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goEmail()">
@@ -72,7 +72,7 @@
       <ion-icon name="calendar-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Fecha de Nacimiento:</h5>
-        <h2>14/08/1985</h2>
+        <h2>{{participant.birthday}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goBirthdate()">
@@ -85,7 +85,7 @@
       <ion-icon name="call-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Teléfono Celular:</h5>
-        <h2>+569 993598579</h2>
+        <h2>{{participant.phone}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goTelephone()">
@@ -98,7 +98,7 @@
       <ion-icon name="home-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Calle Domicilio:</h5>
-        <h2>Apoquindo xxx</h2>
+        <h2>{{participant.street}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goStreetAddress()">
@@ -108,10 +108,10 @@
     </ion-item>
 
     <ion-item>
-      <ion-icon name="home-outline" slot="start"></ion-icon>
+      <ion-icon name="map-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Comuna Domicilio</h5>
-        <h2>Los Condes</h2>
+        <h2>{{participant.comunity}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goComDomicile()">
@@ -124,5 +124,10 @@
   </ion-list>
 </ion-card>
 
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="saveParticipant(participant)">
+  <ion-fab-button >
+    <ion-icon name="checkmark-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 
 </ion-content>
