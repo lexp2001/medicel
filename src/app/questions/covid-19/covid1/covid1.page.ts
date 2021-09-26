@@ -1,3 +1,4 @@
+import { Covid19FormService } from './../../../services/covid19-form.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +9,11 @@ import { Router } from '@angular/router';
 })
 export class Covid1Page implements OnInit {
 
-  constructor(private router: Router) { }
+  covid19: any
+ 
+
+  constructor(private router: Router,
+    private Covid19FormService: Covid19FormService) { }
 
   goCovid2(){
     this.router.navigate(['/covid2'])
@@ -18,6 +23,8 @@ export class Covid1Page implements OnInit {
     this.router.navigate(['/main/home'])
   }
   ngOnInit() {
+    this.covid19 = this.Covid19FormService
+    console.info(this.covid19)
   }
 
 }

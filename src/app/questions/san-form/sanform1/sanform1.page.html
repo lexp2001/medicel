@@ -28,7 +28,7 @@
     </ion-card-header>
 
     <ion-list>
-      <ion-radio-group value="biff">
+      <ion-radio-group value="biff" [(ngModel)]="SanForm.sanform1">
 
         <ion-item>
           <ion-label>Isapre</ion-label>
@@ -51,7 +51,7 @@
 
   
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goQuestion2()">
+    <ion-fab-button (click)="goSanForm2()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

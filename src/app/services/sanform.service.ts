@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ParticipantService {
+export class SanFormService {
 
   private _sanform1: string;
   private _sanform2: string;

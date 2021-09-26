@@ -1,5 +1,7 @@
+import { SanFormService } from './../../../services/sanform.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sanform1',
@@ -8,10 +10,13 @@ import { Router } from '@angular/router';
 })
 export class SanForm1Page implements OnInit {
 
-  constructor(private router: Router) { }
+  SanForm: any
 
-  goQuestion2(){
-    this.router.navigate(['/question2'])
+  constructor(private router: Router,
+    private SanFormService: SanFormService)  { }
+
+  goSanForm2(){
+    this.router.navigate(['/sanform2'])
   }
 
   goHome(){
@@ -19,6 +24,8 @@ export class SanForm1Page implements OnInit {
   }
   
   ngOnInit() {
+    this.SanForm = this.SanFormService
+    console.info(this.SanFormService)
   }
 
 }

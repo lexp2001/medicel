@@ -10,8 +10,8 @@ export class SanForm2Page implements OnInit {
 
   constructor(private router: Router) { }
 
-  goQuestion3(){
-    this.router.navigate(['/question3'])
+  goSanform3(){
+    this.router.navigate(['/sanform3'])
   }
 
   goHome(){

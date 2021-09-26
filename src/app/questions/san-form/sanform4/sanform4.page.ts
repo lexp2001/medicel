@@ -10,8 +10,8 @@ export class SanForm4Page implements OnInit {
 
   constructor(private router: Router) { }
 
-  goQuestion5(){
-    this.router.navigate(['/question5'])
+  goSanForm5(){
+    this.router.navigate(['/sanform5'])
   }
   goHome(){
     this.router.navigate(['/main/home'])
