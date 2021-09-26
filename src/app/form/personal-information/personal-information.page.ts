@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ParticipantService } from '../../services/participant.service'
+import { ParticipantSharedService } from '../../services/participant-shared.service'
 import { ParticipantInterface } from '../../interfaces/participant.interface'
+import { ParticipantService } from '../../services/participant.service'
+
 @Component({
   selector: 'app-personal-information',
   templateUrl: './personal-information.page.html',
@@ -13,6 +15,7 @@ export class PersonalInformationPage implements OnInit {
 
   constructor(
     private router: Router,
+    private participantSharedService: ParticipantSharedService,
     private participantService: ParticipantService
     ) { }
 
@@ -54,6 +57,7 @@ export class PersonalInformationPage implements OnInit {
     console.info(part)
     let parti: ParticipantInterface = {
       birthday: part._birthday,
+      email: part._email,
       comunity: part._comunity,
       name: part._name,
       phone: part._phone,
@@ -68,7 +72,7 @@ export class PersonalInformationPage implements OnInit {
  
 
   ngOnInit() {
-    this.participant = this.participantService
+    this.participant = this.participantSharedService
     console.info(this.participant)
   }
 

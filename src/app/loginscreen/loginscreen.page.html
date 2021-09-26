@@ -5,13 +5,13 @@
       <div class="wrapform">
         <ion-item>
 
-          <ion-input type="text" name="email" placeholder="Email" [(ngModle)]="email" required>
+          <ion-input type="text" name="userEmail" placeholder="Email" [(ngModel)]="userEmail" required>
             <ion-icon name="mail-outline"></ion-icon>
           </ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input type="password " name="password" placeholder="********" [(ngModle)]="email" required>
+          <ion-input type="password " name="userPass" placeholder="********" [(ngModel)]="userPass" required>
             <ion-icon name="lock-closed-outline"></ion-icon>
           </ion-input>
         </ion-item>
@@ -20,7 +20,7 @@
         <ion-button href="forgotpassword" fill="clear" class="ion-no-padding">¿Olvidaste tu contraseña?</ion-button>
       </div>
       <div class="sign-btn-wrap">
-        <ion-button (click)="navigate()" text="" shape="round" fill="solid" class="sgn-btn">Entrar</ion-button>
+        <ion-button (click)="onCLickEnter()" text="" shape="round" fill="solid" class="sgn-btn">Entrar</ion-button>
 
       </div>
 

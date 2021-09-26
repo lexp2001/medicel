@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ParticipantService } from '../../services/participant.service'
+import { ParticipantSharedService } from '../../services/participant-shared.service'
 
 @Component({
   selector: 'app-com-domicile',
@@ -13,7 +13,7 @@ export class ComDomicilePage implements OnInit {
   
   constructor(
     private router: Router,
-    private participantService: ParticipantService
+    private participantSharedService: ParticipantSharedService
     ) { }
 
   goUpload(){
@@ -23,7 +23,7 @@ export class ComDomicilePage implements OnInit {
     this.router.navigate(['/login'])
   }
   ngOnInit() {
-    this.participant = this.participantService
+    this.participant = this.participantSharedService
     console.info(this.participant)
   }
 

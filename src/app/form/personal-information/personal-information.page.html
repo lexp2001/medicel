@@ -32,7 +32,7 @@
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Nombre y Apellido:</h5>
-        <h2>{{participant.name}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.name}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goName()">
@@ -45,7 +45,7 @@
       <ion-icon name="tablet-landscape-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Rut:</h5>
-        <h2>{{participant.rut}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.rut}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goRut()">
@@ -59,7 +59,7 @@
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Email:</h5>
-        <h2>{{participant.email}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.email}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goEmail()">
@@ -72,7 +72,7 @@
       <ion-icon name="calendar-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Fecha de Nacimiento:</h5>
-        <h2>{{participant.birthday}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.birthday}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goBirthdate()">
@@ -85,7 +85,7 @@
       <ion-icon name="call-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Teléfono Celular:</h5>
-        <h2>{{participant.phone}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.phone}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goTelephone()">
@@ -98,7 +98,7 @@
       <ion-icon name="home-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Calle Domicilio:</h5>
-        <h2>{{participant.street}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.street}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goStreetAddress()">
@@ -111,7 +111,7 @@
       <ion-icon name="map-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Comuna Domicilio</h5>
-        <h2>{{participant.comunity}}</h2>
+        <h2 *ngIf="participant.participantData">{{participant.participantData.comunity}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button  (click)="goComDomicile()">
