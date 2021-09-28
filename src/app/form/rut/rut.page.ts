@@ -20,8 +20,8 @@ export class RutPage implements OnInit {
     this.router.navigate(['/main/profile/birth-date'])
   }
   
-  goLogin(){
-    this.router.navigate(['/login'])
+  onClickCLose(){
+    this.router.navigate(['/main/personal/profile'])
   }
 
   ngOnInit() {

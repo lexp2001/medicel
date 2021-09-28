@@ -20,8 +20,8 @@ export class EmailPage implements OnInit {
     this.router.navigate(['/name'])
   }
 
-  goLogin(){
-    this.router.navigate(['/login'])
+  onClickCLose(){
+    this.router.navigate(['/main/personal/profile'])
   }
 
   ngOnInit() {

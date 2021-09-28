@@ -35,16 +35,16 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'profile/email',
-        loadChildren: () => import('../form/email/email.module').then( m => m.EmailPageModule)
-      },
-      {
         path: 'profile/rut',
         loadChildren: () => import('../form/rut/rut.module').then( m => m.RutPageModule)
       },
       {
         path: 'profile/birth-date',
         loadChildren: () => import('../form/birth-date/birth-date.module').then( m => m.BirthDatePageModule)
+      },
+      {
+        path: 'profile/email',
+        loadChildren: () => import('../form/email/email.module').then( m => m.EmailPageModule)
       },
       {
         path: 'profile/telephone',
@@ -57,6 +57,11 @@ const routes: Routes = [
       {
         path: 'profile/com-domicile',
         loadChildren: () => import('../form/com-domicile/com-domicile.module').then( m => m.ComDomicilePageModule)
+      },
+
+      {
+        path: 'profile/upload-qr',
+        loadChildren: () => import('../form/upload-photo/upload-photo.module').then( m => m.UploadPhotoPageModule)
       },
 
       {

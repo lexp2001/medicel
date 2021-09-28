@@ -21,31 +21,34 @@ export class PersonalInformationPage implements OnInit {
     private participantService: ParticipantService,
     public loadingController: LoadingController,
     public toastController: ToastController
-    ) { }
+  ) { }
 
-    async presentToast(msg: string) {
-      const toast = await this.toastController.create({
-        message: msg,
-        duration: 4000
-      });
-      toast.present();
-    }
-  
-    async presentLoading() {
-      const loading = await this.loadingController.create({
-        cssClass: 'my-custom-class',
-        message: 'Guardando datos...'
-      });
-      await loading.present();
-    }
+  async presentToast(msg: string) {
+    const toast = await this.toastController.create({
+      message: msg,
+      duration: 4000
+    });
+    toast.present();
+  }
 
-  
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Guardando datos...'
+    });
+    await loading.present();
+  }
+
+  onClickCLose() {
+    this.router.navigate(['/main/home'])
+  }
+
 
   goTab(tab: string) {
     this.router.navigate([`/main/personal/${tab}`])
   }
 
-  saveParticipant(){
+  saveParticipant() {
     this.presentLoading()
     if (this.participant["_isNew"]) {
       this.participantService.createParticipant(this.participant["participantData"]).
@@ -60,9 +63,9 @@ export class PersonalInformationPage implements OnInit {
           this.loadingController.dismiss()
         })
     }
-    
+
   }
- 
+
 
   ngOnInit() {
     this.participant = this.participantSharedService

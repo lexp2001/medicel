@@ -10,8 +10,12 @@ export class UploadPhotoPage implements OnInit {
 
   constructor(private router: Router)  { }
 
+  onClickCLose(){
+    this.router.navigate(['/main/personal/profile'])
+  }
+
   goPersonalInformation(){
-    this.router.navigate(['/personal-information'])
+    this.router.navigate(['/main/personal/profile'])
   }
 
   ngOnInit() {

@@ -85,10 +85,7 @@ const routes: Routes = [
     path: 'cal-modal',
     loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
   },
-  {
-    path: 'upload-photo',
-    loadChildren: () => import('./screens/upload-photo/upload-photo.module').then( m => m.UploadPhotoPageModule)
-  },
+
   {
     path: 'questionnaire-details',
     loadChildren: () => import('./questions/san-form/questionnaire-details/questionnaire-details.module').then( m => m.QuestionnaireDetailsPageModule)

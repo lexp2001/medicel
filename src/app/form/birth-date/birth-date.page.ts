@@ -19,8 +19,8 @@ export class BirthDatePage implements OnInit {
   goAge(){
     this.router.navigate(['/main/profile/telephone'])
   }
-  goLogin(){
-    this.router.navigate(['/login'])
+  onClickCLose(){
+    this.router.navigate(['/main/personal/profile'])
   }
   ngOnInit() {
     this.participant = this.participantSharedService

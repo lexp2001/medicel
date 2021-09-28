@@ -20,8 +20,8 @@ export class StreetAddressPage implements OnInit {
     this.router.navigate(['/main/profile/com-domicile'])
   }
 
-  goLogin(){
-    this.router.navigate(['/login'])
+  onClickCLose(){
+    this.router.navigate(['/main/personal/profile'])
   }
 
   ngOnInit() {

@@ -21,8 +21,8 @@ export class NamePage implements OnInit {
   }
 
   
-  goLogin(){
-    this.router.navigate(['..'])
+  onClickClose(){
+    this.router.navigate(['/main/personal/profile'])
   }
 
   ngOnInit() {

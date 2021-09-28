@@ -50,6 +50,10 @@ export class ProfileComponent implements OnInit {
       this.router.navigate(['main/profile/com-domicile'])
     }
 
+    goUploadQR() {
+      this.router.navigate(['/main/profile/upload-qr'])
+    }
+
   ngOnInit() {
     this.participant = this.participantSharedService
     console.info(this.participant)

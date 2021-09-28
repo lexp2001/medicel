@@ -17,10 +17,10 @@ export class ComDomicilePage implements OnInit {
     ) { }
 
   goUpload(){
-    this.router.navigate(['/upload-photo'])
+    this.router.navigate(['/main/profile/upload-qr'])
   }
-  goLogin(){
-    this.router.navigate(['/login'])
+  onClickCLose(){
+    this.router.navigate(['/main/personal/profile'])
   }
   ngOnInit() {
     this.participant = this.participantSharedService
