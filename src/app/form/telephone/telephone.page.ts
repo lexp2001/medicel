@@ -17,7 +17,7 @@ export class TelephonePage implements OnInit {
     ) { }
 
   goStreetAddress(){
-    this.router.navigate(['/street-address'])
+    this.router.navigate(['/main/profile/street-address'])
   }
 
   goLogin(){

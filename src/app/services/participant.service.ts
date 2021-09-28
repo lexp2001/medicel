@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http'
 import { Observable } from 'rxjs'
+import { throwError, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { ParticipantInterface } from '../interfaces/participant.interface'
 
 @Injectable({
@@ -20,11 +22,28 @@ export class ParticipantService {
   }
 
   getParticipantByRut(rut: string): Observable<any> {
-    return this.http.get<any>('https://medicelpro.azurewebsites.net/api/getParticipantByRut/' + rut )
+    return this.http
+      .get<any>('https://medicelpro.azurewebsites.net/api/getParticipantByRut/' + rut )
+      .pipe(
+        catchError(error => {
+            let errorMsg: string;
+            if (error.error instanceof ErrorEvent) {
+                errorMsg = `Error: ${error.error.message}`;
+            } else {
+                errorMsg = `Error: ${error.error}`;
+            }
+
+            return throwError(errorMsg);
+        })
+    );
   }
 
-  getParticipantByEmail(email: string): Observable<any> {
-    return this.http.get<any>('https://medicelpro.azurewebsites.net/api/getParticipantByEmail/' + email )
+  getParticipantByEmail(email: string): Observable<ParticipantInterface> {
+    return this.http.get<ParticipantInterface>('https://medicelpro.azurewebsites.net/api/getParticipantByEmail/' + email )
+  }
+
+  updateParticipant(participant: ParticipantInterface): Observable<any> {
+    return this.http.put<any>('https://medicelpro.azurewebsites.net/api/updateParticipantByRut/' + participant.rut ,participant)
   }
 
 }

@@ -4,11 +4,11 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>
-     
+
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
-        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      <ion-button (click)="goHome()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -17,117 +17,23 @@
 
   <ion-toolbar>
     <ion-segment value="all">
-      <ion-segment-button value="all">Perfil</ion-segment-button>
-      <ion-segment-button value="question">Cuestionario</ion-segment-button>
-      <ion-segment-button value="favorites">Covid-19</ion-segment-button>
+      <ion-segment-button value="all" (click)="goTab('profile')">Perfil</ion-segment-button>
+      <ion-segment-button value="question" (click)="goTab('questions')">Cuestionario</ion-segment-button>
+      <ion-segment-button value="favorites" (click)="goTab('covid')">Covid-19</ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 
 
-  <ion-card style="margin-left:20px;">
+  <ion-card style="margin-left:20px;height: 100%;">
+    <br> <br> <br> <br>
+    <ion-router-outlet></ion-router-outlet>
 
-  <ion-list>
+  </ion-card>
 
-    <ion-item>
-      <ion-icon name="person-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Nombre y Apellido:</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.name}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goName()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="tablet-landscape-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Rut:</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.rut}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goRut()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-    
-    
-    <ion-item>
-      <ion-icon name="person-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Email:</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.email}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goEmail()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="calendar-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Fecha de Nacimiento:</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.birthday}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goBirthdate()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-    
-    <ion-item>
-      <ion-icon name="call-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Teléfono Celular:</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.phone}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goTelephone()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="home-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Calle Domicilio:</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.street}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goStreetAddress()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="map-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Comuna Domicilio</h5>
-        <h2 *ngIf="participant.participantData">{{participant.participantData.comunity}}</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button  (click)="goComDomicile()">
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-
-
-  </ion-list>
-</ion-card>
-
-<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="saveParticipant(participant)">
-  <ion-fab-button >
-    <ion-icon name="checkmark-outline"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="saveParticipant()">
+    <ion-fab-button>
+      <ion-icon name="checkmark-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>

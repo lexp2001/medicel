@@ -17,7 +17,7 @@ export class RutPage implements OnInit {
     ) { }
 
   goBirthDate(){
-    this.router.navigate(['/birth-date'])
+    this.router.navigate(['/main/profile/birth-date'])
   }
   
   goLogin(){

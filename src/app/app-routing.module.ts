@@ -25,30 +25,7 @@ const routes: Routes = [
     path: 'loginscreen',
     loadChildren: () => import('./loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
   },
-  {
-    path: 'name',
-    loadChildren: () => import('./form/name/name.module').then( m => m.NamePageModule)
-  },
-  {
-    path: 'rut',
-    loadChildren: () => import('./form/rut/rut.module').then( m => m.RutPageModule)
-  },
-  {
-    path: 'birth-date',
-    loadChildren: () => import('./form/birth-date/birth-date.module').then( m => m.BirthDatePageModule)
-  },
-  {
-    path: 'telephone',
-    loadChildren: () => import('./form/telephone/telephone.module').then( m => m.TelephonePageModule)
-  },
-  {
-    path: 'street-address',
-    loadChildren: () => import('./form/street-address/street-address.module').then( m => m.StreetAddressPageModule)
-  },
-  {
-    path: 'com-domicile',
-    loadChildren: () => import('./form/com-domicile/com-domicile.module').then( m => m.ComDomicilePageModule)
-  },
+  
   {
     path: 'sanform1',
     loadChildren: () => import('./questions/san-form/sanform1/sanform1.module').then( m => m.SanForm1PageModule)
@@ -81,10 +58,7 @@ const routes: Routes = [
     path: 'sanform5',
     loadChildren: () => import('./questions/san-form/sanform5/sanform5.module').then( m => m.SanForm5PageModule)
   },
-  {
-    path: 'personal-information',
-    loadChildren: () => import('./form/personal-information/personal-information.module').then( m => m.PersonalInformationPageModule)
-  },
+
 
   {
     path: 'screen-events-details',
@@ -94,10 +68,6 @@ const routes: Routes = [
   {
     path: 'publicity',
     loadChildren: () => import('./screens/publicity/publicity.module').then( m => m.PublicityPageModule)
-  },
-  {
-    path: 'email',
-    loadChildren: () => import('./form/email/email.module').then( m => m.EmailPageModule)
   },
   {
     path: 'assist-control',

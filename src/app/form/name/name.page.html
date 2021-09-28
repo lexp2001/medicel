@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/profile"></ion-back-button>
     </ion-buttons>
     <ion-title>
       2 de 7
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goLogin()">
-        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      <ion-button (click)="goLogin()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -29,11 +29,12 @@
 
     <ion-card-content>
       <ion-item>
-        <ion-input name="name" types="text" placeholder="Nombre y apellido" [(ngModel)]="participant.name">
+        <ion-input *ngIf="participant.participantData" name="name" types="text" placeholder="Nombre y apellido"
+          [(ngModel)]="participant.participantData.name">
           <ion-icon name="person-outline"></ion-icon>
         </ion-input>
 
-          
+
       </ion-item>
 
 
@@ -42,7 +43,7 @@
         <ion-button shape="round" fill="solid" class="sgn-btn">Siguiente</ion-button>
   
       </div> -->
-     
+
     </ion-card-content>
 
   </ion-card>

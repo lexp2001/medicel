@@ -13,7 +13,7 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'personalInformation',
+        path: 'personal',
         loadChildren: () => import('../form/personal-information/personal-information.module').then(m => m.PersonalInformationPageModule)
       },
       {
@@ -28,6 +28,37 @@ const routes: Routes = [
         path: 'code',
         loadChildren: () => import('../code/code.module').then(m => m.CodePageModule)
       },
+
+      {
+        path: 'profile/name',
+        loadChildren: () => import('../form/name/name.module').then( m => m.NamePageModule),
+        pathMatch: 'full'
+      },
+      {
+        path: 'profile/email',
+        loadChildren: () => import('../form/email/email.module').then( m => m.EmailPageModule)
+      },
+      {
+        path: 'profile/rut',
+        loadChildren: () => import('../form/rut/rut.module').then( m => m.RutPageModule)
+      },
+      {
+        path: 'profile/birth-date',
+        loadChildren: () => import('../form/birth-date/birth-date.module').then( m => m.BirthDatePageModule)
+      },
+      {
+        path: 'profile/telephone',
+        loadChildren: () => import('../form/telephone/telephone.module').then( m => m.TelephonePageModule)
+      },
+      {
+        path: 'profile/street-address',
+        loadChildren: () => import('../form/street-address/street-address.module').then( m => m.StreetAddressPageModule)
+      },
+      {
+        path: 'profile/com-domicile',
+        loadChildren: () => import('../form/com-domicile/com-domicile.module').then( m => m.ComDomicilePageModule)
+      },
+
       {
         path: '',
         redirectTo: '/tabs/home',

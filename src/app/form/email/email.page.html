@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/profile"></ion-back-button>
     </ion-buttons>
     <ion-title>
       1 de 7
@@ -29,7 +29,7 @@
 
     <ion-card-content>
       <ion-item>
-        <ion-input name="email" types="text" placeholder="Email"  [(ngModel)]="participant.email">
+        <ion-input  *ngIf="participant.participantData" name="email" types="text" placeholder="Email"  [(ngModel)]="participant.participantData.email">
           <ion-icon name="mail-outline"></ion-icon>
         </ion-input>
 

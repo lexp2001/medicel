@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/profile"></ion-back-button>
     </ion-buttons>
     <ion-title>
       3 de 7
@@ -29,11 +29,9 @@
 
     <ion-card-content>
       <ion-item>
-        <ion-input name="rut" types="text" placeholder="Rut" [(ngModel)]="participant.rut">
+        <ion-input *ngIf="participant.participantData" name="rut" types="text" placeholder="Rut" [(ngModel)]="participant.participantData.rut">
           <ion-icon name="id-card-outline"></ion-icon>
         </ion-input>
-
-        
       </ion-item>
 
 

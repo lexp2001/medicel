@@ -17,7 +17,7 @@ export class StreetAddressPage implements OnInit {
     ) { }
 
   goComDomicile(){
-    this.router.navigate(['/com-domicile'])
+    this.router.navigate(['/main/profile/com-domicile'])
   }
 
   goLogin(){

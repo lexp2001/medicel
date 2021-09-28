@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ParticipantSharedService } from '../../services/participant-shared.service'
 import { ParticipantInterface } from '../../interfaces/participant.interface'
 import { ParticipantService } from '../../services/participant.service'
+import { ToastController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-personal-information',
@@ -16,58 +18,49 @@ export class PersonalInformationPage implements OnInit {
   constructor(
     private router: Router,
     private participantSharedService: ParticipantSharedService,
-    private participantService: ParticipantService
+    private participantService: ParticipantService,
+    public loadingController: LoadingController,
+    public toastController: ToastController
     ) { }
 
-  goHome() {
-    this.router.navigate(['main/home'])
-  }
-
-  goName() {
-    this.router.navigate(['name'])
-  }
-
-
-  goRut() {
-    this.router.navigate(['rut'])
-  }
-
-  goEmail() {
-    this.router.navigate(['email'])
-  }
-
-  goBirthdate() {
-    this.router.navigate(['birth-date'])
-  }
-
-  goTelephone() {
-    this.router.navigate(['telephone'])
-  }
-
-  goStreetAddress() {
-    this.router.navigate(['street-address'])
-  }
-
-
-  goComDomicile() {
-    this.router.navigate(['com-domicile'])
-  }
-
-  saveParticipant(part: any){
-    console.info(part)
-    let parti: ParticipantInterface = {
-      birthday: part._birthday,
-      email: part._email,
-      comunity: part._comunity,
-      name: part._name,
-      phone: part._phone,
-      rut: part._rut,
-      street: part._street
+    async presentToast(msg: string) {
+      const toast = await this.toastController.create({
+        message: msg,
+        duration: 4000
+      });
+      toast.present();
     }
-    this.participantService.createParticipant(parti).
-      subscribe(data => {
-        console.info(data)
-      })
+  
+    async presentLoading() {
+      const loading = await this.loadingController.create({
+        cssClass: 'my-custom-class',
+        message: 'Guardando datos...'
+      });
+      await loading.present();
+    }
+
+  
+
+  goTab(tab: string) {
+    this.router.navigate([`/main/personal/${tab}`])
+  }
+
+  saveParticipant(){
+    this.presentLoading()
+    if (this.participant["_isNew"]) {
+      this.participantService.createParticipant(this.participant["participantData"]).
+        subscribe(data => {
+          console.info(data)
+          this.loadingController.dismiss()
+        })
+    } else {
+      this.participantService.updateParticipant(this.participant["participantData"]).
+        subscribe(data => {
+          console.info(data)
+          this.loadingController.dismiss()
+        })
+    }
+    
   }
  
 
