@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class UploadPhotoPage implements OnInit {
 
+  public uploadedImgUrl = ""
   constructor(private router: Router)  { }
 
   onClickCLose(){
@@ -17,6 +18,18 @@ export class UploadPhotoPage implements OnInit {
   goPersonalInformation(){
     this.router.navigate(['/main/personal/profile'])
   }
+
+  onSelectFile(event) { // called each time file input changes
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.uploadedImgUrl = event.target.result as string;
+      }
+    }
+}
 
   ngOnInit() {
   }
