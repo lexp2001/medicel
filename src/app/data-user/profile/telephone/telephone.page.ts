@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ParticipantSharedService } from '../../services/participant-shared.service'
+import { ParticipantSharedService } from '../../../services/participant-shared.service'
 
 @Component({
-  selector: 'app-birth-date',
-  templateUrl: './birth-date.page.html',
-  styleUrls: ['./birth-date.page.scss'],
+  selector: 'app-telephone',
+  templateUrl: './telephone.page.html',
+  styleUrls: ['./telephone.page.scss'],
 })
-export class BirthDatePage implements OnInit {
+export class TelephonePage implements OnInit {
 
   participant: any
 
@@ -16,12 +16,14 @@ export class BirthDatePage implements OnInit {
     private participantSharedService: ParticipantSharedService
     ) { }
 
-  goAge(){
-    this.router.navigate(['/main/profile/telephone'])
+  goStreetAddress(){
+    this.router.navigate(['/main/profile/street-address'])
   }
+
   onClickCLose(){
     this.router.navigate(['/main/personal/profile'])
   }
+
   ngOnInit() {
     this.participant = this.participantSharedService
     console.info(this.participant)

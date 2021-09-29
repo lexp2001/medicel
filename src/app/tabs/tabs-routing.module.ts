@@ -1,4 +1,4 @@
-import { PersonalInformationPage } from './../form/personal-information/personal-information.page';
+import { PersonalInformationPage } from '../data-user/personal-information.page';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         path: 'personal',
-        loadChildren: () => import('../form/personal-information/personal-information.module').then(m => m.PersonalInformationPageModule)
+        loadChildren: () => import('../data-user/personal-information.module').then(m => m.PersonalInformationPageModule)
       },
       {
         path: 'events',
@@ -31,37 +31,37 @@ const routes: Routes = [
 
       {
         path: 'profile/name',
-        loadChildren: () => import('../form/name/name.module').then( m => m.NamePageModule),
+        loadChildren: () => import('../data-user/profile/name/name.module').then( m => m.NamePageModule),
         pathMatch: 'full'
       },
       {
         path: 'profile/rut',
-        loadChildren: () => import('../form/rut/rut.module').then( m => m.RutPageModule)
+        loadChildren: () => import('../data-user/profile/rut/rut.module').then( m => m.RutPageModule)
       },
       {
         path: 'profile/birth-date',
-        loadChildren: () => import('../form/birth-date/birth-date.module').then( m => m.BirthDatePageModule)
+        loadChildren: () => import('../data-user/profile/birth-date/birth-date.module').then( m => m.BirthDatePageModule)
       },
       {
         path: 'profile/email',
-        loadChildren: () => import('../form/email/email.module').then( m => m.EmailPageModule)
+        loadChildren: () => import('../data-user/profile/email/email.module').then( m => m.EmailPageModule)
       },
       {
         path: 'profile/telephone',
-        loadChildren: () => import('../form/telephone/telephone.module').then( m => m.TelephonePageModule)
+        loadChildren: () => import('../data-user/profile/telephone/telephone.module').then( m => m.TelephonePageModule)
       },
       {
         path: 'profile/street-address',
-        loadChildren: () => import('../form/street-address/street-address.module').then( m => m.StreetAddressPageModule)
+        loadChildren: () => import('../data-user/profile/street-address/street-address.module').then( m => m.StreetAddressPageModule)
       },
       {
         path: 'profile/com-domicile',
-        loadChildren: () => import('../form/com-domicile/com-domicile.module').then( m => m.ComDomicilePageModule)
+        loadChildren: () => import('../data-user/profile/com-domicile/com-domicile.module').then( m => m.ComDomicilePageModule)
       },
 
       {
         path: 'profile/upload-qr',
-        loadChildren: () => import('../form/upload-photo/upload-photo.module').then( m => m.UploadPhotoPageModule)
+        loadChildren: () => import('../data-user/profile/upload-photo/upload-photo.module').then( m => m.UploadPhotoPageModule)
       },
 
       {

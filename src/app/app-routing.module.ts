@@ -28,19 +28,19 @@ const routes: Routes = [
   
   {
     path: 'sanform1',
-    loadChildren: () => import('./questions/san-form/sanform1/sanform1.module').then( m => m.SanForm1PageModule)
+    loadChildren: () => import('./data-user/base-questions/sanform1/sanform1.module').then( m => m.SanForm1PageModule)
   },
   {
     path: 'sanform2',
-    loadChildren: () => import('./questions/san-form/sanform2/sanform2.module').then( m => m.SanForm2PageModule)
+    loadChildren: () => import('./data-user/base-questions/sanform2/sanform2.module').then( m => m.SanForm2PageModule)
   },
   {
     path: 'sanform3',
-    loadChildren: () => import('./questions/san-form/sanform3/sanform3.module').then( m => m.SanForm3PageModule)
+    loadChildren: () => import('./data-user/base-questions/sanform3/sanform3.module').then( m => m.SanForm3PageModule)
   },
   {
     path: 'sanform4',
-    loadChildren: () => import('./questions/san-form/sanform4/sanform4.module').then( m => m.SanForm4PageModule)
+    loadChildren: () => import('./data-user/base-questions/sanform4/sanform4.module').then( m => m.SanForm4PageModule)
   },
   {
     path: 'covid1',
@@ -56,7 +56,7 @@ const routes: Routes = [
   },
   {
     path: 'sanform5',
-    loadChildren: () => import('./questions/san-form/sanform5/sanform5.module').then( m => m.SanForm5PageModule)
+    loadChildren: () => import('./data-user/base-questions/sanform5/sanform5.module').then( m => m.SanForm5PageModule)
   },
 
 
@@ -71,7 +71,7 @@ const routes: Routes = [
   },
   {
     path: 'assist-control',
-    loadChildren: () => import('./questions/san-form/assist-control/assist-control.module').then( m => m.AssistControlPageModule)
+    loadChildren: () => import('./data-user/base-questions/assist-control/assist-control.module').then( m => m.AssistControlPageModule)
   },
   {
     path: 'publicity2',

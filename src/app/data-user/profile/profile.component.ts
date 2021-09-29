@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ParticipantSharedService } from '../../../services/participant-shared.service'
+import { ParticipantSharedService } from '../../services/participant-shared.service'
 
 @Component({
   selector: 'app-profile',

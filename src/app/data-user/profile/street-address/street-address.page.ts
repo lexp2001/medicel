@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ParticipantSharedService } from '../../services/participant-shared.service'
+import { ParticipantSharedService } from '../../../services/participant-shared.service'
 
 @Component({
-  selector: 'app-email',
-  templateUrl: './email.page.html',
-  styleUrls: ['./email.page.scss'],
+  selector: 'app-street-address',
+  templateUrl: './street-address.page.html',
+  styleUrls: ['./street-address.page.scss'],
 })
-export class EmailPage implements OnInit {
+export class StreetAddressPage implements OnInit {
 
   participant: any
 
@@ -16,8 +16,8 @@ export class EmailPage implements OnInit {
     private participantSharedService: ParticipantSharedService
     ) { }
 
-  goName(){
-    this.router.navigate(['/name'])
+  goComDomicile(){
+    this.router.navigate(['/main/profile/com-domicile'])
   }
 
   onClickCLose(){

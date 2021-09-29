@@ -1,4 +1,4 @@
-import { SanFormService } from './../../../services/sanform.service';
+import { SanFormService } from '../../../services/sanform.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
