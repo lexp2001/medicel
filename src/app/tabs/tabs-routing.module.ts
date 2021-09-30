@@ -64,20 +64,24 @@ const routes: Routes = [
       },
 
       {
-        path: 'question1',
+        path: 'health/question1',
         loadChildren: () => import('../data-user/base-questions/sanform1/sanform1.module').then( m => m.SanForm1PageModule)
       },
       {
-        path: 'question2',
+        path: 'health/question2',
         loadChildren: () => import('../data-user/base-questions/sanform2/sanform2.module').then( m => m.SanForm2PageModule)
       },
       {
-        path: 'question3',
+        path: 'health/question3',
         loadChildren: () => import('../data-user/base-questions/sanform3/sanform3.module').then( m => m.SanForm3PageModule)
       },
       {
-        path: 'question4',
+        path: 'health/question4',
         loadChildren: () => import('../data-user/base-questions/sanform4/sanform4.module').then( m => m.SanForm4PageModule)
+      },
+      {
+        path: 'health/question5',
+        loadChildren: () => import('../data-user/base-questions/sanform5/sanform5.module').then( m => m.SanForm5PageModule)
       },
 
       {

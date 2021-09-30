@@ -15,8 +15,8 @@ export class SanForm2Page implements OnInit {
     private router: Router,
     private participantSharedService: ParticipantSharedService,) { }
 
-  goSanform3(){
-    this.router.navigate(['/sanform3'])
+  goQ4(){
+    this.router.navigate(['/main/health/question4'])
   }
 
   onClickCLose(){

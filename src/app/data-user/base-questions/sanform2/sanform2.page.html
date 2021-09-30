@@ -4,7 +4,7 @@
       <ion-back-button defaultHref="/main/personal/questions"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      2 de 2
+      2 de 4
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onClickCLose()">
@@ -70,8 +70,8 @@
     </ion-list>
   </ion-card>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="onClickCLose()">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="participant.participantData.questions[1]!=''">
+    <ion-fab-button (click)="goQ4()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

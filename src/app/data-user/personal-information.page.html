@@ -14,10 +14,10 @@
 </ion-header>
 
 <ion-toolbar>
-  <ion-segment value="all">
-    <ion-segment-button value="all" (click)="goTab('profile')">Perfil</ion-segment-button>
-    <ion-segment-button value="question" (click)="goTab('questions')">Cuestionario</ion-segment-button>
-    <ion-segment-button value="favorites" (click)="goTab('covid')">Covid-19</ion-segment-button>
+  <ion-segment [(ngModel)]="currentDataTab">
+    <ion-segment-button value="profile" (click)="goTab('profile')">Perfil</ion-segment-button>
+    <ion-segment-button value="health" (click)="goTab('questions')">Salud</ion-segment-button>
+    <ion-segment-button value="covid" (click)="goTab('covid')">Covid-19</ion-segment-button>
   </ion-segment>
 </ion-toolbar>
 

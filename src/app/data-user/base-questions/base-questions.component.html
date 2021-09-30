@@ -1,47 +1,79 @@
-  <ion-list >
+<ion-list>
 
-    <ion-item  (click)="goQ1()">
-      <ion-icon name="medkit-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Previsión de Salud:</h5>
-        <h2>
-          {{participant.participantData.questions[0]}}
-        </h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
+  <ion-item (click)="goQ1()">
+    <ion-icon name="medkit-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h5>Previsión de Salud:</h5>
+      <h2>
+        {{participant.participantData.questions[0]}}
+      </h2>
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
 
-    <ion-item *ngIf="participant.participantData.questions[0]=='Isapre'" (click)="goQ2()">
-      <ion-icon name="people-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>¿A cuál estás afiliado?:</h5>
-        <h2>
-          {{participant.participantData.questions[1]}}
-        </h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
+  <ion-item *ngIf="participant.participantData.questions[0]=='Isapre'" (click)="goQ2()">
+    <ion-icon name="people-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h5>¿A cuál estás afiliado?:</h5>
+      <h2>
+        {{participant.participantData.questions[1]}}
+      </h2>
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
 
-    <ion-item *ngIf="participant.participantData.questions[0]=='Fonasa'" (click)="goQ3()">
-      <ion-icon name="help-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>¿Cuál es la letra de tu tramo?:</h5>
-        <h2>
-          {{participant.participantData.questions[1]}}
-        </h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-  </ion-list>
+  <ion-item *ngIf="participant.participantData.questions[0]=='Fonasa'" (click)="goQ3()">
+    <ion-icon name="help-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h5>¿Cuál es la letra de tu tramo?:</h5>
+      <h2>
+        {{participant.participantData.questions[1]}}
+      </h2>
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+  <ion-item (click)="goQ4()">
+    <ion-icon name="snow-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h5>¿Te has vacunado contra el Covid-19?</h5>
+      <h2>
+        {{participant.participantData.questions[2]}}
+      </h2>
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+  <ion-item *ngIf="participant.participantData.questions[2]!='' && participant.participantData.questions[2]!='No'" (click)="goQ5()">
+    <ion-icon name="flask-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h5>¿Qué vacuna?</h5>
+      <h2>
+        {{participant.participantData.questions[3]}}
+      </h2>
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+
+</ion-list>

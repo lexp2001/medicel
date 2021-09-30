@@ -14,6 +14,7 @@ import { LoadingController } from '@ionic/angular';
 export class PersonalInformationPage implements OnInit {
 
   participant: any
+  currentDataTab = "profile"
 
   constructor(
     private router: Router,
@@ -70,6 +71,8 @@ export class PersonalInformationPage implements OnInit {
   ngOnInit() {
     this.participant = this.participantSharedService
     console.info(this.participant)
+    this.currentDataTab = "profile"
+    this.goTab('profile')
   }
 
 }

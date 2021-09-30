@@ -18,15 +18,23 @@ export class BaseQuestionsComponent implements OnInit {
     ) { }
 
   goQ1() {
-    this.router.navigate(['main/question1'])
+    this.router.navigate(['main/health/question1'])
   }
 
   goQ2() {
-    this.router.navigate(['main/question2'])
+    this.router.navigate(['main/health/question2'])
   }
 
   goQ3() {
-    this.router.navigate(['main/question3'])
+    this.router.navigate(['main/health/question3'])
+  }
+
+  goQ4() {
+    this.router.navigate(['main/health/question4'])
+  }
+
+  goQ5() {
+    this.router.navigate(['main/health/question5'])
   }
 
   ngOnInit() {

@@ -15,9 +15,6 @@ export class SanForm3Page implements OnInit {
     private router: Router,
     private participantSharedService: ParticipantSharedService,) { }
 
-  goSanForm4(){
-    this.router.navigate(['/sanform4'])
-  }
 
   goHome(){
     this.router.navigate(['/main/home'])
@@ -25,6 +22,10 @@ export class SanForm3Page implements OnInit {
 
   onClickCLose(){
     this.router.navigate(['/main/personal/questions'])
+  }
+
+  goQ4(){
+    this.router.navigate(['/main/health/question4'])
   }
 
   ngOnInit() {

@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/questions"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      5 de 5
+      4 de 4
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
+      <ion-button (click)="onClickCLose()">
         <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -23,41 +23,41 @@
       </ion-card-title>
 
       <ion-card-subtitle>
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
+        Selecciona cual vacuna te han suministrado.
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-list>
-      <ion-radio-group value="biff">
+      <ion-radio-group [(ngModel)]="participant.participantData.questions[3]">
 
         <ion-item>
           <ion-label>Pfizer</ion-label>
-          <ion-radio slot="start" value="biff"></ion-radio>
+          <ion-radio slot="start" value="Pfizer"></ion-radio>
         </ion-item>
     
         <ion-item>
           <ion-label>Sinovac</ion-label>
-          <ion-radio slot="start" value="griff"></ion-radio>
+          <ion-radio slot="start" value="Sinovac"></ion-radio>
         </ion-item>
     
         <ion-item>
           <ion-label>Cansino</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-radio slot="start" value="Cansino"></ion-radio>
         </ion-item>
 
         <ion-item>
           <ion-label>Astrazeneca</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-radio slot="start" value="Astrazeneca"></ion-radio>
         </ion-item>
 
         <ion-item>
           <ion-label>No la recuerdo</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-radio slot="start" value="No la recuerdo"></ion-radio>
         </ion-item>
 
         <ion-item>
-          <ion-label>Ninguna</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-label>Otra</ion-label>
+          <ion-radio slot="start" value="Otra"></ion-radio>
         </ion-item>
 
 
@@ -71,7 +71,7 @@
 
   
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goQuestion6()">
+    <ion-fab-button (click)="onClickCLose()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

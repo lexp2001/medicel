@@ -21,9 +21,9 @@ export class SanForm1Page implements OnInit {
 
   goQ2Q3() {
     if (this.participant.participantData.questions[0]=="Isapre") {
-      this.router.navigate(['/main/question2'])
+      this.router.navigate(['/main/health/question2'])
     } else {
-      this.router.navigate(['/main/question3'])
+      this.router.navigate(['/main/health/question3'])
     }
     
   }
