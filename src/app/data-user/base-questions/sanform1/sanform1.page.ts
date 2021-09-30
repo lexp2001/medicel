@@ -1,31 +1,49 @@
 import { SanFormService } from '../../../services/sanform.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ParticipantSharedService } from '../../../services/participant-shared.service'
 
 
 @Component({
   selector: 'app-sanform1',
   templateUrl: './sanform1.page.html',
-  styleUrls: ['./sanform1.page.scss'],
+  styleUrls: ['../../personal-information.page.scss'],
 })
 export class SanForm1Page implements OnInit {
 
   SanForm: any
+  participant: any
 
-  constructor(private router: Router,
-    private SanFormService: SanFormService)  { }
+  constructor(
+    private router: Router,
+    private participantSharedService: ParticipantSharedService,
+    private SanFormService: SanFormService) { }
 
-  goSanForm2(){
-    this.router.navigate(['/sanform2'])
+  goQ2Q3() {
+    if (this.participant.participantData.questions[0]=="Isapre") {
+      this.router.navigate(['/main/question2'])
+    } else {
+      this.router.navigate(['/main/question3'])
+    }
+    
   }
 
-  goHome(){
-    this.router.navigate(['/main/home'])
+  goQuestions() {
+    this.router.navigate(['/main/personal/questions'])
   }
-  
+
+  onChange($event) {
+    // console.info(this.participant.participantData.questions[0])
+    // console.info($event)
+    // if ($event=="") {
+
+    // }
+    this.participant.participantData.questions[1] = ""
+  }
+
   ngOnInit() {
-    this.SanForm = this.SanFormService
-    console.info(this.SanFormService)
+    this.participant = this.participantSharedService
+    console.info(this.participant)
   }
 
 }

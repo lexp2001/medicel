@@ -7,5 +7,6 @@ export interface ParticipantInterface {
     name: string
     phone: string
     rut: string
-    street: string
+    street: string,
+    questions: [string, string]
 }

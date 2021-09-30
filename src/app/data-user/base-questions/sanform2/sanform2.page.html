@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/questions"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      2 de 5
+      2 de 2
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
+      <ion-button (click)="onClickCLose()">
         <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -28,55 +28,50 @@
     </ion-card-header>
 
     <ion-list>
-      <ion-radio-group value="biff">
+      <ion-radio-group [(ngModel)]="participant.participantData.questions[1]">
 
         <ion-item>
-          <ion-label>Colmena</ion-label>
-          <ion-radio slot="start" value="biff"></ion-radio>
+          <ion-label>COLMENA</ion-label>
+          <ion-radio slot="start" value="Colmena"></ion-radio>
         </ion-item>
     
         <ion-item>
-          <ion-label>Banmedica</ion-label>
-          <ion-radio slot="start" value="griff"></ion-radio>
+          <ion-label>BANMEDICA</ion-label>
+          <ion-radio slot="start" value="Banmedica"></ion-radio>
         </ion-item>
     
         <ion-item>
-          <ion-label>Cruz Blanca</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-label>CRUZ BLANCA</ion-label>
+          <ion-radio slot="start" value="Cruz Blanca"></ion-radio>
         </ion-item>
         
         <ion-item>
-          <ion-label>Vida 3</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-label>VIDA 3</ion-label>
+          <ion-radio slot="start" value="Vida 3"></ion-radio>
         </ion-item>
 
         <ion-item>
-          <ion-label>Consalud</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-label>CONSALUD</ion-label>
+          <ion-radio slot="start" value="Consalud"></ion-radio>
         </ion-item>
 
         <ion-item>
-          <ion-label>Más Vida</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-label>MÁS VIDA</ion-label>
+          <ion-radio slot="start" value="Más Vida"></ion-radio>
         </ion-item>
 
         <ion-item>
-          <ion-label>Otro</ion-label>
-          <ion-radio slot="start" value="buford"></ion-radio>
+          <ion-label>OTRO</ion-label>
+          <ion-radio slot="start" value="Otro"></ion-radio>
         </ion-item>
 
 
       </ion-radio-group>
     </ion-list>
-    
-
-
-
   </ion-card>
 
-  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goSanform3()">
+    <ion-fab-button (click)="onClickCLose()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

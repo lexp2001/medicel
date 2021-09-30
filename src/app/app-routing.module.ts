@@ -26,22 +26,7 @@ const routes: Routes = [
     loadChildren: () => import('./loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
   },
   
-  {
-    path: 'sanform1',
-    loadChildren: () => import('./data-user/base-questions/sanform1/sanform1.module').then( m => m.SanForm1PageModule)
-  },
-  {
-    path: 'sanform2',
-    loadChildren: () => import('./data-user/base-questions/sanform2/sanform2.module').then( m => m.SanForm2PageModule)
-  },
-  {
-    path: 'sanform3',
-    loadChildren: () => import('./data-user/base-questions/sanform3/sanform3.module').then( m => m.SanForm3PageModule)
-  },
-  {
-    path: 'sanform4',
-    loadChildren: () => import('./data-user/base-questions/sanform4/sanform4.module').then( m => m.SanForm4PageModule)
-  },
+  
   {
     path: 'covid1',
     loadChildren: () => import('./questions/covid-19/covid1/covid1.module').then( m => m.Covid1PageModule)

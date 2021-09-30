@@ -13,7 +13,8 @@ export class ParticipantSharedService {
     phone: "",
     street: "",
     comunity: "",
-    birthday: ""
+    birthday: "",
+    questions: ["", ""]
 
   }
   private _isNew: boolean

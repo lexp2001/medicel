@@ -1,17 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ParticipantSharedService } from '../../../services/participant-shared.service'
 
 @Component({
   selector: 'app-question2',
   templateUrl: './sanform2.page.html',
-  styleUrls: ['./sanform2.page.scss'],
+  styleUrls: ['../../personal-information.page.scss'],
 })
 export class SanForm2Page implements OnInit {
 
-  constructor(private router: Router) { }
+  participant: any
+
+  constructor(
+    private router: Router,
+    private participantSharedService: ParticipantSharedService,) { }
 
   goSanform3(){
     this.router.navigate(['/sanform3'])
+  }
+
+  onClickCLose(){
+    this.router.navigate(['/main/personal/questions'])
   }
 
   goHome(){
@@ -19,6 +28,8 @@ export class SanForm2Page implements OnInit {
   }
   
   ngOnInit() {
+    this.participant = this.participantSharedService
+    console.info(this.participant)
   }
 
 }

@@ -5,7 +5,7 @@ import { ParticipantSharedService } from '../../../services/participant-shared.s
 @Component({
   selector: 'app-name',
   templateUrl: './name.page.html',
-  styleUrls: ['./name.page.scss'],
+  styleUrls: ['../../personal-information.page.scss']
 })
 export class NamePage implements OnInit {
 

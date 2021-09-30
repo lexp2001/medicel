@@ -58,10 +58,26 @@ const routes: Routes = [
         path: 'profile/com-domicile',
         loadChildren: () => import('../data-user/profile/com-domicile/com-domicile.module').then( m => m.ComDomicilePageModule)
       },
-
       {
         path: 'profile/upload-qr',
         loadChildren: () => import('../data-user/profile/upload-photo/upload-photo.module').then( m => m.UploadPhotoPageModule)
+      },
+
+      {
+        path: 'question1',
+        loadChildren: () => import('../data-user/base-questions/sanform1/sanform1.module').then( m => m.SanForm1PageModule)
+      },
+      {
+        path: 'question2',
+        loadChildren: () => import('../data-user/base-questions/sanform2/sanform2.module').then( m => m.SanForm2PageModule)
+      },
+      {
+        path: 'question3',
+        loadChildren: () => import('../data-user/base-questions/sanform3/sanform3.module').then( m => m.SanForm3PageModule)
+      },
+      {
+        path: 'question4',
+        loadChildren: () => import('../data-user/base-questions/sanform4/sanform4.module').then( m => m.SanForm4PageModule)
       },
 
       {

@@ -1,11 +1,10 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" style="position:unset;">
   <ion-toolbar color="primary">
+
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/main/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>
 
-    </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onClickCLose()">
         <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
@@ -13,27 +12,24 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-toolbar>
+  <ion-segment value="all">
+    <ion-segment-button value="all" (click)="goTab('profile')">Perfil</ion-segment-button>
+    <ion-segment-button value="question" (click)="goTab('questions')">Cuestionario</ion-segment-button>
+    <ion-segment-button value="favorites" (click)="goTab('covid')">Covid-19</ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
 <ion-content class="bg-color">
+  <ion-card style="margin-left:20px;height: calc(100% - 20px);">
 
-  <ion-toolbar>
-    <ion-segment value="all">
-      <ion-segment-button value="all" (click)="goTab('profile')">Perfil</ion-segment-button>
-      <ion-segment-button value="question" (click)="goTab('questions')">Cuestionario</ion-segment-button>
-      <ion-segment-button value="favorites" (click)="goTab('covid')">Covid-19</ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
-
-
-  <ion-card style="margin-left:20px;height: 100%;">
-    <br> <br> <br> <br>
     <ion-router-outlet></ion-router-outlet>
-
+    
   </ion-card>
-
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="saveParticipant()">
     <ion-fab-button>
       <ion-icon name="checkmark-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
 </ion-content>

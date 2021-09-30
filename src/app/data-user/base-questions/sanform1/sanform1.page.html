@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/questions"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      1 de 5
+      1 de 2
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
+      <ion-button  (click)="goQuestions()">
         <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -23,21 +23,21 @@
       </ion-card-title>
 
       <ion-card-subtitle>
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
+        Selecciona cuál es tu previsión de salud vigente.
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-list>
-      <ion-radio-group value="biff" [(ngModel)]="SanForm.sanform1">
+      <ion-radio-group (ngModelChange)="onChange($event)" [(ngModel)]="participant.participantData.questions[0]">
 
         <ion-item>
-          <ion-label>Isapre</ion-label>
-          <ion-radio slot="start" value="biff"></ion-radio>
+          <ion-label>ISAPRE</ion-label>
+          <ion-radio slot="start" value="Isapre"></ion-radio>
         </ion-item>
     
         <ion-item>
-          <ion-label>Fonasa</ion-label>
-          <ion-radio slot="start" value="griff"></ion-radio>
+          <ion-label>FONASA</ion-label>
+          <ion-radio slot="start" value="Fonasa"></ion-radio>
         </ion-item>
     
         
@@ -50,8 +50,8 @@
   </ion-card>
 
   
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goSanForm2()">
+  <ion-fab *ngIf="participant.participantData.questions[0]!=''" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goQ2Q3()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
