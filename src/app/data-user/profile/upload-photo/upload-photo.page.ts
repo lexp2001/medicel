@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AzureBlobs } from 'src/app/services/azure-blobs.service';
 
 @Component({
   selector: 'app-upload-photo',
@@ -9,13 +10,18 @@ import { Router } from '@angular/router';
 export class UploadPhotoPage implements OnInit {
 
   public uploadedImgUrl = ""
-  constructor(private router: Router)  { }
+  sas = "sp=racwdl&st=2021-08-24T21:32:50Z&se=2023-01-01T05:32:50Z&spr=https&sv=2020-08-04&sr=c&sig=WHheDgFG%2F%2FUMMULVeGS2SAMjpomHyIBFh1lvMEscTOY%3D"
 
-  onClickCLose(){
+  constructor(
+    private router: Router,
+    private azureBlobsService: AzureBlobs
+  ) { }
+
+  onClickCLose() {
     this.router.navigate(['/main/personal/profile'])
   }
 
-  goPersonalInformation(){
+  goPersonalInformation() {
     this.router.navigate(['/main/personal/profile'])
   }
 
@@ -29,7 +35,11 @@ export class UploadPhotoPage implements OnInit {
         this.uploadedImgUrl = event.target.result as string;
       }
     }
-}
+
+    let file = (event.target as HTMLInputElement).files![0];
+    this.azureBlobsService.uploadImage(this.sas, file, file.name, () => { })
+    console.info(file)
+  }
 
   ngOnInit() {
   }
