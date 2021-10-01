@@ -85,6 +85,19 @@ const routes: Routes = [
       },
 
       {
+        path: 'covid/question1',
+        loadChildren: () => import('../data-user/covid-questions/covid1/covid1.module').then( m => m.Covid1PageModule)
+      },
+      {
+        path: 'covid/question2',
+        loadChildren: () => import('../data-user/covid-questions/covid2/covid2.module').then( m => m.Covid2PageModule)
+      },
+      {
+        path: 'covid/question3',
+        loadChildren: () => import('../data-user/covid-questions/covid3/covid3.module').then( m => m.Covid3PageModule)
+      },
+
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'

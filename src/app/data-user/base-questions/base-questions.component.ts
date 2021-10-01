@@ -39,7 +39,6 @@ export class BaseQuestionsComponent implements OnInit {
 
   ngOnInit() {
     this.participant = this.participantSharedService
-    console.info(this.participant)
   }
 
 }

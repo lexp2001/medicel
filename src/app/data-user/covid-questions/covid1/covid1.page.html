@@ -1,13 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/covid"></ion-back-button>
+
     </ion-buttons>
     <ion-title>
       1 de 3
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
+      <ion-button (click)="onClickCLose()">
         <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -23,21 +24,21 @@
       </ion-card-title>
 
       <ion-card-subtitle>
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
+        Por favor selecciones una opción.
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-list>
-      <ion-radio-group value="biff" [(ngModel)]="covid19.covid1">
+      <ion-radio-group [(ngModel)]="participant.participantData.covid[0]">
 
         <ion-item>
           <ion-label>Si</ion-label>
-          <ion-radio slot="start" value="si"></ion-radio>
+          <ion-radio slot="start" value="Si"></ion-radio>
         </ion-item>
     
         <ion-item>
           <ion-label>No</ion-label>
-          <ion-radio slot="start" value="no"></ion-radio>
+          <ion-radio slot="start" value="No"></ion-radio>
         </ion-item>
     
 
@@ -50,7 +51,7 @@
   </ion-card>
 
   
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab *ngIf= "participant.participantData.covid[0]!=''" vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="goCovid2()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>

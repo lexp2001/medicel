@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/personal/covid"></ion-back-button>
     </ion-buttons>
     <ion-title>
       3 de 3
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
+      <ion-button (click)="onClickCLose()">
         <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -90,7 +90,7 @@
 
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goHome()">
+    <ion-fab-button (click)="onClickCLose()">
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

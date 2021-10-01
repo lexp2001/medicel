@@ -25,25 +25,6 @@ const routes: Routes = [
     path: 'loginscreen',
     loadChildren: () => import('./loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
   },
-  
-  
-  {
-    path: 'covid1',
-    loadChildren: () => import('./questions/covid-19/covid1/covid1.module').then( m => m.Covid1PageModule)
-  },
-  {
-    path: 'covid2',
-    loadChildren: () => import('./questions/covid-19/covid2/covid2.module').then( m => m.Covid2PageModule)
-  },
-  {
-    path: 'covid3',
-    loadChildren: () => import('./questions/covid-19/covid3/covid3.module').then( m => m.Covid3PageModule)
-  },
-  {
-    path: 'sanform5',
-    loadChildren: () => import('./data-user/base-questions/sanform5/sanform5.module').then( m => m.SanForm5PageModule)
-  },
-
 
   {
     path: 'screen-events-details',
@@ -53,10 +34,6 @@ const routes: Routes = [
   {
     path: 'publicity',
     loadChildren: () => import('./screens/publicity/publicity.module').then( m => m.PublicityPageModule)
-  },
-  {
-    path: 'assist-control',
-    loadChildren: () => import('./data-user/base-questions/assist-control/assist-control.module').then( m => m.AssistControlPageModule)
   },
   {
     path: 'publicity2',
@@ -69,15 +46,6 @@ const routes: Routes = [
   {
     path: 'cal-modal',
     loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
-  },
-
-  {
-    path: 'questionnaire-details',
-    loadChildren: () => import('./questions/san-form/questionnaire-details/questionnaire-details.module').then( m => m.QuestionnaireDetailsPageModule)
-  },
-  {
-    path: 'covid19-details',
-    loadChildren: () => import('./questions/covid-19/covid19-details/covid19-details.module').then( m => m.Covid19DetailsPageModule)
   },
   {
     path: 'chart',

@@ -1,23 +1,58 @@
-<ion-list class="list">
+<ion-content>
+  <h4 style="color: rgb(109, 109, 109);">Control Acceso Recinto - Covid19</h4>
+  <h5 style="color: rgb(109, 109, 109);">El llenado de este cuestionario es personal y es de responsabilidad exclusiva
+    de la persona, trabajador o
+    cualquier persona que ingrese al recinto.</h5>
+  <h5 style="color: rgb(109, 109, 109);">Debe ser completado diariamente y es requisito para poder ingresar al recinto
+    asignado. Recuerde que,
+    acorde a las autoridades sanitarias, de tener síntomas relacionados a COVID-19 o de haber tenido contacto
+    estrecho no debe salir de suresidencia.</h5>
+  <h5 style="color: rgb(109, 109, 109);">Los datos de este formulario son confidenciales y solo para uso médico.</h5>
 
-  <ion-item>
-    <ion-icon name="people-outline" slot="start"></ion-icon>
-    <ion-label>
-      <h5>¿Has tenido contacto estrecho con <br>
-        una persona enferma de COVID-19 <br>
-        durante los últimos 5 días?:</h5>
-      <h2>No</h2>
-    </ion-label>
-    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
-  </ion-item>
 
-  <ion-item>
-    <ion-icon name="heart-circle-outline" slot="start"></ion-icon>
-    <ion-label>
-      <h5>¿Has presentado algunos de estos <br>
-        síntomas en los últimos 3 días?:</h5>
-      <h2>Sin Sintomas</h2>
-    </ion-label>
-    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
-  </ion-item>
-</ion-list>
+  <ion-list class="list">
+
+    <ion-item (click)="goQ1()">
+      <ion-icon name="person-add-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>¿Has tenido contacto estrecho con <br>
+          una persona enferma de COVID-19 <br>
+          durante los últimos 5 días?:</h5>
+        <h2>{{participant.participantData.covid[0]}}</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item (click)="goQ2()">
+      <ion-icon name="thermometer-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>¿Has presentado algunos de estos <br>
+          síntomas en los últimos 3 días?:</h5>
+        <h2>Sin Sintomas</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item (click)="goQ3()">
+      <ion-icon name="thumbs-up-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Acuerdo de Confidencialidad</h5>
+        <h2>Aceptado</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

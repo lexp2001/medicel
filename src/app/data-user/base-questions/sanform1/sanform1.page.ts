@@ -1,4 +1,3 @@
-import { SanFormService } from '../../../services/sanform.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ParticipantSharedService } from '../../../services/participant-shared.service'
@@ -11,13 +10,12 @@ import { ParticipantSharedService } from '../../../services/participant-shared.s
 })
 export class SanForm1Page implements OnInit {
 
-  SanForm: any
   participant: any
 
   constructor(
     private router: Router,
-    private participantSharedService: ParticipantSharedService,
-    private SanFormService: SanFormService) { }
+    private participantSharedService: ParticipantSharedService
+    ) { }
 
   goQ2Q3() {
     if (this.participant.participantData.questions[0]=="Isapre") {
@@ -43,7 +41,6 @@ export class SanForm1Page implements OnInit {
 
   ngOnInit() {
     this.participant = this.participantSharedService
-    console.info(this.participant)
   }
 
 }

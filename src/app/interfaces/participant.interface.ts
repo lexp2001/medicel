@@ -3,10 +3,16 @@ export interface ParticipantInterface {
     birthday: string
     password?: string
     email: string
-    comunity:  string
+    comunity: string
     name: string
     phone: string
     rut: string
     street: string,
-    questions: [string, string, string, string]
+    questions: [string, string, string, string],
+    covid: [string, 
+           [string, string, string, 
+            string, string, string, 
+            string, string, string, 
+            string, string, string], 
+            string]
 }

@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ParticipantSharedService } from '../../../services/participant-shared.service'
 
 @Component({
-  selector: 'app-question2',
-  templateUrl: './sanform2.page.html',
+  selector: 'app-covid2',
+  templateUrl: './covid2.page.html',
   styleUrls: ['../../personal-information.page.scss'],
 })
-export class SanForm2Page implements OnInit {
+export class Covid2Page implements OnInit {
 
   participant: any
 
@@ -15,14 +15,13 @@ export class SanForm2Page implements OnInit {
     private router: Router,
     private participantSharedService: ParticipantSharedService,) { }
 
-  goQ4(){
-    this.router.navigate(['/main/health/question4'])
-  }
-
   onClickCLose(){
-    this.router.navigate(['/main/personal/questions'])
+    this.router.navigate(['/main/personal/covid'])
   }
 
+  goCovid3(){
+    this.router.navigate(['main/covid/question3'])
+  }
   goHome(){
     this.router.navigate(['/main/home'])
   }

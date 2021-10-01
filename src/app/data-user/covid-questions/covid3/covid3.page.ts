@@ -10,6 +10,10 @@ export class Covid3Page implements OnInit {
 
   constructor(private router: Router) { }
 
+  onClickCLose(){
+    this.router.navigate(['/main/personal/covid'])
+  }
+
   goHome() {
     this.router.navigate(['main/home'])
   }
