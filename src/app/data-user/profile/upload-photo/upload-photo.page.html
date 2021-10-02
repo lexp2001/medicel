@@ -22,24 +22,27 @@
         Pase de Movilidad
       </ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      <div class="center">
+
+    <div class="img-center">
+    <div>
         <ion-img *ngIf="uploadedImgUrl == ''" src="assets/images/upload-photo.png"></ion-img>
         <img *ngIf="uploadedImgUrl != ''" [src]="uploadedImgUrl">
       </div>
-
-      <div class="upload-pass">
-        <ion-button fill="clear">Presione aquí para subir <br>su pase de movilidad</ion-button>
-      </div>
-
-    </ion-card-content>
+    </div>
+   
+    
+    <div class="upload-pass">
+      <ion-button fill="clear">Presione aquí para subir <br>su pase de movilidad</ion-button>
+    </div>
 
   </ion-card>
-  <ion-content class="sign-btn-wrap">
+  <div class="sign-btn-wrap">
+    <div class="choose-file">
     <ion-item>
       <input type="file" (change)="onSelectFile($event)">
     </ion-item>
+  </div>
     <ion-button (click)="goPersonalInformation()" text="" shape="round" fill="solid" class="sgn-btn"
       style="margin-top: 20px;">Subir Pase</ion-button>
-  </ion-content>
+  </div>
 </ion-content>

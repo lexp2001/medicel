@@ -16,7 +16,7 @@ ion-header{
 }
 
 ion-item{
-    padding-top: 10px;
+    padding: 0 !important;
     color:#74787E;
     --border-color: #D4D7DB; 
     --highlight-color-focussed: #215AB7;
@@ -33,10 +33,29 @@ ion-item{
     }
 }
 
+.img-center{
+    display: flex;
+    justify-content: center;
+    
+    div{
+        width: 70% !important;
+    }
+}
+
+.choose-file{
+    display: flex;
+    justify-content: center;
+
+    input{
+        text-align-last: center;
+    }
+}
+
 .upload-pass{
+    margin-top: 15px;
     text-align:center;
     ion-button{
-        font-size: 15px;
+        font-size: 0.9pc;
         color: rgb(109, 109, 109);
         font-weight: 700;
     }
@@ -45,7 +64,6 @@ ion-item{
 
 .sign-btn-wrap{
     text-align: center;
-    padding-top: 30px;
     .sign-btn{
         --ion-primary-color: #215AB7;
         --background:#215AB7;
