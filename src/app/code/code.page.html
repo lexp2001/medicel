@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/main/home"></ion-back-button>
     </ion-buttons>
     <ion-title>
      Código QR
@@ -17,11 +17,27 @@
 <ion-content class="bg-color">
 
   <ion-content padding>
+
+    <ion-card>
     <div class="center">
       <ion-img src="assets/images/qr-code.png"></ion-img>
-      </div>   
-      <h2>Andrés Mallea</h2>
-      <h5>153391653</h5> 
+      </div> 
+
+    </ion-card>
+
+    <div>
+      <div class="div-h">
+      <h2>Nombre:</h2>
+      <h5>{{participant.participantData.name}}</h5>
+    </div>
+
+    <div class="div-h">
+      <h2>Rut:</h2> 
+      <h5>{{participant.participantData.rut}}</h5>
+    </div>
+     
+    </div>
+
 
       
 </ion-content>

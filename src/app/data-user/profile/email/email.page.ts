@@ -17,7 +17,7 @@ export class EmailPage implements OnInit {
     ) { }
 
   goName(){
-    this.router.navigate(['/name'])
+    this.router.navigate(['/main/profile/telephone'])
   }
 
   onClickCLose(){

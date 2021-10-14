@@ -17,7 +17,7 @@ export class BirthDatePage implements OnInit {
     ) { }
 
   goAge(){
-    this.router.navigate(['/main/profile/telephone'])
+    this.router.navigate(['/main/profile/email'])
   }
   onClickCLose(){
     this.router.navigate(['/main/personal/profile'])

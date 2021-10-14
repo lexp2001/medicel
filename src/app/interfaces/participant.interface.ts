@@ -10,9 +10,9 @@ export interface ParticipantInterface {
     street: string,
     questions: [string, string, string, string],
     covid: [string, 
-           [string, string, string, 
-            string, string, string, 
-            string, string, string, 
-            string, string, string], 
-            string]
+           [boolean, boolean, boolean, 
+            boolean, boolean, boolean, 
+            boolean, boolean, boolean, 
+            boolean, boolean, boolean], 
+            boolean]
 }

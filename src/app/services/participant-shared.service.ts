@@ -15,11 +15,11 @@ export class ParticipantSharedService {
     comunity: "",
     birthday: "",
     questions: ["", "", "", ""],
-    covid: ["", ["false", "false", "false", 
-                 "false", "false", "false", 
-                 "false", "false", "false", 
-                 "false", "false", "false"], 
-            ""]
+    covid: ["", [false, false, false, 
+                 false, false, false, 
+                 false, false, false, 
+                 false, false, false], 
+            false]
   }
   private _isNew: boolean
 

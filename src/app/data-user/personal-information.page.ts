@@ -56,6 +56,7 @@ export class PersonalInformationPage implements OnInit {
         subscribe(data => {
           console.info(data)
           this.loadingController.dismiss()
+          this.participant["isNew"] = false
         })
     } else {
       this.participantService.updateParticipant(this.participant["participantData"]).

@@ -33,6 +33,7 @@
         color: var(--ion-color-primary);
         font-size: 0.9em;
         font-weight: 900;
+        
     }
     
 }
@@ -54,6 +55,10 @@ swiper {
             font-size: 0.9em;
             font-weight: 500;
             color: var(--ion-color-primary);
+            width: 130px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             ion-icon {
                 color: gray;
@@ -76,11 +81,11 @@ ion-list{
 
     p{
         font-size: 0.9em;
-       
         color: gray;
         margin-left: 20px;
         margin-block-start: 10px !important;
         margin-block-end: 10px !important;
+
         
         ion-icon {
             color: gray;

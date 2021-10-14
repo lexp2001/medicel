@@ -20,9 +20,9 @@ export class LoginPage implements OnInit {
     this.participant["isNew"] = false
     this.router.navigate(['/loginscreen'])
   }
-  goEmail(){
+  goUserData(){
     this.participant["isNew"] = true
-    this.router.navigate(['/email'])
+    this.router.navigate(['/main/profile/name'])
   }
 
 

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <div class="medicel-home-header">
-      <ion-img src="assets/images/logo-medicel-alone.svg"></ion-img>
+      <ion-img style="max-width: 150px;" src="assets/images/logo-medicel-alone.svg"></ion-img>
       <div class="medicel-home-user">
         <p class="medicel-home-welcome"> Bienvenido,</p>
         <p class="medicel-home-name">{{participant.participantData.name}}</p>
@@ -11,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
 
   <div class="medicel-home-all-events">
     <ion-title>Invitaciones a eventos</ion-title>
@@ -21,7 +21,7 @@
   <swiper #swiper [config]="config">
     <ng-template swiperSlide>
       <ion-card>
-        <img src="assets/images/world.jpg">
+        <img src="assets/images/world.jpg" >
         <ion-text>Conferencia Ambiental</ion-text>
         <p>
           <ion-icon name="calendar-outline"></ion-icon>20 de Julio, 2021
@@ -30,7 +30,6 @@
           <ion-icon name="map-outline"></ion-icon>Avenida las rosas
         </p>
         <ion-buttons>
-          <ion-button color="primary">Reservar</ion-button>
           <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
         </ion-buttons>
 
@@ -45,11 +44,10 @@
           <ion-icon name="calendar-outline"></ion-icon>28 de Julio, 2021
         </p>
         <p>
-          <ion-icon name="map-outline"></ion-icon>Centro Cultural tec
+          <ion-icon name="map-outline" ></ion-icon>Centro Cultural tec
         </p>
         <ion-buttons>
-          <ion-button color="primary">Reservar</ion-button>
-          <ion-button color="secondary">Detalles</ion-button>
+          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
         </ion-buttons>
       </ion-card>
     </ng-template>
@@ -65,8 +63,7 @@
           <ion-icon name="map-outline"></ion-icon>Calle Huelen 309
         </p>
         <ion-buttons>
-          <ion-button color="primary">Reservar</ion-button>
-          <ion-button color="secondary">Detalles</ion-button>
+          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
         </ion-buttons>
       </ion-card>
     </ng-template>
@@ -79,11 +76,10 @@
           <ion-icon name="calendar-outline"></ion-icon>03 de Agosto, 2021
         </p>
         <p>
-          <ion-icon name="map-outline"></ion-icon>Avenida Blanco Encalada
+          <ion-icon name="map-outline" ></ion-icon>Avenida Blanco Encalada
         </p>
         <ion-buttons>
-          <ion-button color="primary">Reservar</ion-button>
-          <ion-button color="secondary">Detalles</ion-button>
+          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
         </ion-buttons>
       </ion-card>
     </ng-template>
