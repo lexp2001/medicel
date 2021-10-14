@@ -1,0 +1,29 @@
+trigger:
+  branches:
+    include:
+    - master
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '12.x'
+      displayName: 'Install Node.js'
+    - task: CmdLine@2
+      displayName: 'npm install and build'
+      inputs:
+        script: |
+          npm install -g @angular/cli
+          npm install
+          ng build --prod
+    - task: AzureStaticWebApp@0
+      inputs:
+        app_location: "/"
+        api_location: "api"
+        output_location: "dist"
+      env:
+        azure_static_web_apps_api_token: $(deployment_token)
