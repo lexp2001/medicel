@@ -38,7 +38,6 @@ export class HomePage implements AfterContentChecked, OnInit{
 
   ngOnInit() {
     this.participant = this.participantSharedService
-    console.info(this.participant)
   }
 
 }

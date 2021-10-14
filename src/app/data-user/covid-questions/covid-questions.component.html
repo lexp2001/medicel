@@ -15,9 +15,9 @@
     <ion-item (click)="goQ1()">
       <ion-icon name="person-add-outline" slot="start"></ion-icon>
       <ion-label>
-        <h5>¿Has tenido contacto estrecho con <br>
-          una persona enferma de COVID-19 <br>
-          durante los últimos 5 días?:</h5>
+        <h5 class="ion-text-wrap">
+          ¿Has tenido contacto estrecho con una persona 
+          enferma de COVID-19 durante los últimos 5 días?</h5>
         <h2>{{participant.participantData.covid[0]}}</h2>
       </ion-label>
       <ion-buttons slot="end">
@@ -30,9 +30,9 @@
     <ion-item (click)="goQ2()">
       <ion-icon name="thermometer-outline" slot="start"></ion-icon>
       <ion-label>
-        <h5>¿Has presentado algunos de estos <br>
-          síntomas en los últimos 3 días?:</h5>
-        <h2>Sin Sintomas</h2>
+        <h5 class="ion-text-wrap">¿Has presentado algunos de estos 
+          síntomas en los últimos 3 días?</h5>
+        <h2>{{checkq2()}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button>
@@ -45,7 +45,7 @@
       <ion-icon name="thumbs-up-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Acuerdo de Confidencialidad</h5>
-        <h2>Aceptado</h2>
+        <h2>{{checkq3()}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button>

@@ -29,6 +29,25 @@ export class CovidQuestionsComponent implements OnInit {
       this.router.navigate(['main/covid/question3'])
     }
 
+    checkq2(): string {
+      var resp = this.participant.participantData.covid[1].filter( (f: boolean)=> {
+        return f == true
+      }).length
+      if (resp == 0 ) {
+        return "No"
+      } else {
+        return `Si, ${resp} síntomas`
+      }
+    }
+
+    checkq3(): string {
+      if (this.participant.participantData.covid[2]==true) {
+        return "Aceptado"
+      } else {
+        return ""
+      }
+    }
+
     ngOnInit() {
       this.participant = this.participantSharedService
     }

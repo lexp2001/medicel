@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <div class="medicel-home-header">
-      <ion-img src="assets/images/logo-medicel-alone.svg"></ion-img>
+      <ion-img style="max-width: 150px;" src="assets/images/logo-medicel-alone.svg"></ion-img>
       <div class="medicel-home-user">
         <p class="medicel-home-welcome"> Bienvenido,</p>
         <p class="medicel-home-name">{{participant.participantData.name}}</p>
@@ -11,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
 
   <div class="medicel-home-all-events">
     <ion-title>Invitaciones a eventos</ion-title>
@@ -21,7 +21,7 @@
   <swiper #swiper [config]="config">
     <ng-template swiperSlide>
       <ion-card>
-        <img src="assets/images/world.jpg">
+        <img src="assets/images/world.jpg" >
         <ion-text>Conferencia Ambiental</ion-text>
         <p>
           <ion-icon name="calendar-outline"></ion-icon>20 de Julio, 2021
