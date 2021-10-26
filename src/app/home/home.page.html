@@ -1,152 +1,97 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <div class="medicel-home-header">
-      <ion-img style="max-width: 150px;" src="assets/images/logo-medicel-alone.svg"></ion-img>
-      <div class="medicel-home-user">
-        <p class="medicel-home-welcome"> Bienvenido,</p>
-        <p class="medicel-home-name">{{participant.participantData.name}}</p>
-      </div>
-    </div>
-
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Testeo
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button  (click)="goHome()">
+        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="false">
 
-  <div class="medicel-home-all-events">
-    <ion-title>Invitaciones a eventos</ion-title>
-    <p slot="end"> Ver todos ></p>
-  </div>
+
 
   <swiper #swiper [config]="config">
     <ng-template swiperSlide>
       <ion-card>
-        <img src="assets/images/world.jpg" >
-        <ion-text>Conferencia Ambiental</ion-text>
-        <p>
-          <ion-icon name="calendar-outline"></ion-icon>20 de Julio, 2021
-        </p>
-        <p>
-          <ion-icon name="map-outline"></ion-icon>Avenida las rosas
-        </p>
-        <ion-buttons>
-          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
-        </ion-buttons>
-
+       <h3>Datos</h3>
+       <p>Desactualizado</p>
+       <ion-icon name="calendar-outline" color="primary"></ion-icon>
       </ion-card>
     </ng-template>
 
     <ng-template swiperSlide>
       <ion-card>
-        <img src="assets/images/pizz2.jpg">
-        <ion-text>Pizza Don Fede</ion-text>
-        <p>
-          <ion-icon name="calendar-outline"></ion-icon>28 de Julio, 2021
-        </p>
-        <p>
-          <ion-icon name="map-outline" ></ion-icon>Centro Cultural tec
-        </p>
-        <ion-buttons>
-          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
-        </ion-buttons>
+        <h3>Tests</h3>
+       <p>Actualizado</p>
+       <ion-icon name="calendar-outline" color="primary"></ion-icon>
       </ion-card>
     </ng-template>
 
-    <ng-template swiperSlide>
-      <ion-card>
-        <img src="assets/images/books.jpg">
-        <ion-text>Incentivando la lectura</ion-text>
-        <p>
-          <ion-icon name="calendar-outline"></ion-icon>28 de Julio, 2021
-        </p>
-        <p>
-          <ion-icon name="map-outline"></ion-icon>Calle Huelen 309
-        </p>
-        <ion-buttons>
-          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
-        </ion-buttons>
-      </ion-card>
-    </ng-template>
-
-    <ng-template swiperSlide>
-      <ion-card>
-        <img src="assets/images/corrida.jpg">
-        <ion-text>Carrera 20km</ion-text>
-        <p>
-          <ion-icon name="calendar-outline"></ion-icon>03 de Agosto, 2021
-        </p>
-        <p>
-          <ion-icon name="map-outline" ></ion-icon>Avenida Blanco Encalada
-        </p>
-        <ion-buttons>
-          <ion-button (click)="goEventsDetails()" color="secondary">Detalles</ion-button>
-        </ion-buttons>
-      </ion-card>
-    </ng-template>
   </swiper>
 
-  <div class="my-events">
-    <ion-title>Mis eventos Agendados</ion-title>
+  
+  <div class="list-menu">
+    <ion-card>
+      <ion-item>
+        <ion-icon name="document-text-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h2>Mis datos </h2>
+          <h3>Lorem impsum dolor...</h3>
+        </ion-label>
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <ion-icon name="medkit-outline"  slot="start"></ion-icon>
+        <ion-label>
+          <h2>Testeo</h2>
+          <h3>Lorem impsum dolor...</h3>
+        </ion-label>
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <ion-icon name="qr-code-outline"  slot="start"></ion-icon>
+        <ion-label>
+          <h2>Código</h2>
+          <h3>Lorem impsum dolor...</h3>
+        </ion-label>
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <ion-icon name="logo-whatsapp"  slot="start"></ion-icon>
+        <ion-label>
+          <h2>Asistencia</h2>
+          <h3>Lorem impsum dolor...</h3>
+        </ion-label>
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+
+    </ion-card>
+
   </div>
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail>
-        <ion-img src="assets/images/festival.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p>08 de Agosto, 2021</p>
-        <p class="p-event-name">Festival de Música Electronica</p>
-        <p>
-          <ion-icon name="map-outline"></ion-icon>Calle Merced 61
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail>
-        <ion-img src="assets/images/setembro.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p>27 de Agosto 2021</p>
-        <p class="p-event-name">Restaurante Yakitoro</p>
-        <p>
-          <ion-icon name="map-outline"></ion-icon>Av. Arturo Prat
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail>
-        <ion-img src="assets/images/futbol.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p>05 de Septiembre 2021</p>
-        <p class="p-event-name">Campeonato Chileno</p>
-        <p>
-          <ion-icon name="map-outline"></ion-icon>Calle Huelen 309
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail>
-        <ion-img src="assets/images/pizza.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p>27 Jun 2021</p>
-        <p class="p-event-name">Pizza's Luiggi</p>
-        <p>
-          <ion-icon name="map-outline"></ion-icon>Caupolican 502
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
+  
 
 
 </ion-content>
