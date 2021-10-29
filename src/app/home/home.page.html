@@ -6,7 +6,7 @@
 
 
 
-  <swiper #swiper [config]="config" style="margin: 7px 0; margin-right: 20px;">
+  <swiper #swiper [config]="config" style="margin: 7px 0; margin-right: 10px;">
     <ng-template swiperSlide>
       <ion-card style="display: flex; flex-direction: column; align-items: center;">
         <h3 style="color: chocolate; font-weight: 600;">Datos</h3>
@@ -25,39 +25,44 @@
     </ng-template>
 
   </swiper>
+  
 
-  <div class="cleanCard">
-    <ion-icon name="document-text-outline" style="margin: 0 21px; font-size: 28px;"></ion-icon>
-    <span style="flex: 3;">
-      <div style="margin-bottom: 7px; font-weight: 600;">Mis datos</div>
-      <div style="font-size: 14px;">Lorem ipsum dolor sit.</div>
+  <ion-button class="cleanCard" color="primary" (click)="goProfile()">
+    <ion-icon name="person-outline" style="margin: 0 ; font-size: 28px;"></ion-icon>
+    <span style="flex: 3;text-align: initial;padding-left: 20px;">
+      <div style="margin-bottom: 7px; font-weight: 600;text-transform: none;font-size: 18px;">Mis datos</div>
+      <div style="font-size: 14px;;text-transform: none;opacity: 0.7;">Datos personales, formualarios...</div>
     </span>
-    <ion-icon name="arrow-forward-outline" style="margin: 0 21px; font-size: 21px;"></ion-icon>
-  </div>
-  <div class="cleanCard">
-    <ion-icon name="medkit-outline" style="margin: 0 21px; font-size: 28px;"></ion-icon>
-    <span style="flex: 3;">
-      <div style="margin-bottom: 7px; font-weight: 600;">Testeo</div>
-      <div style="font-size: 14px;">Lorem ipsum dolor sit.</div>
+    <ion-icon name="arrow-forward-outline" style="font-size: 21px;"></ion-icon>
+  </ion-button>
+
+  <ion-button class="cleanCard" color="primary" (click)="goTesting()">
+    <ion-icon name="medkit-outline" style="margin: 0 ; font-size: 28px;"></ion-icon>
+    <span style="flex: 3;text-align: initial;padding-left: 20px;">
+      <div style="margin-bottom: 7px; font-weight: 600;text-transform: none;font-size: 18px;">Testeo</div>
+      <div style="font-size: 14px;;text-transform: none;opacity: 0.7;">Ver resultados, agendamientos...</div>
     </span>
-    <ion-icon name="arrow-forward-outline" style="margin: 0 21px; font-size: 21px;"></ion-icon>
-  </div>
-  <div class="cleanCard">
-    <ion-icon name="qr-code-outline" style="margin: 0 21px; font-size: 28px;"></ion-icon>
-    <span style="flex: 3;">
-      <div style="margin-bottom: 7px; font-weight: 600;">Código</div>
-      <div style="font-size: 14px;">Lorem ipsum dolor sit.</div>
+    <ion-icon name="arrow-forward-outline" style="font-size: 21px;"></ion-icon>
+  </ion-button>
+
+  <ion-button class="cleanCard" color="primary" (click)="goCode()">
+    <ion-icon name="qr-code-outline" style="margin: 0 ; font-size: 28px;"></ion-icon>
+    <span style="flex: 3;text-align: initial;padding-left: 20px;">
+      <div style="margin-bottom: 7px; font-weight: 600;text-transform: none;font-size: 18px;">Código</div>
+      <div style="font-size: 14px;;text-transform: none;opacity: 0.7;">Mostrar pase de movilidad</div>
     </span>
-    <ion-icon name="arrow-forward-outline" style="margin: 0 21px; font-size: 21px;"></ion-icon>
-  </div>
-  <div class="cleanCard">
-    <ion-icon name="logo-whatsapp" style="margin: 0 21px; font-size: 28px;"></ion-icon>
-    <span style="flex: 3;">
-      <div style="margin-bottom: 7px; font-weight: 600;">Asistencia</div>
-      <div style="font-size: 14px;">Lorem ipsum dolor sit.</div>
+    <ion-icon name="arrow-forward-outline" style="font-size: 21px;"></ion-icon>
+  </ion-button>
+
+  <ion-button class="cleanCard" color="primary">
+    <ion-icon name="logo-whatsapp" style="margin: 0 ; font-size: 28px;"></ion-icon>
+    <span style="flex: 3;text-align: initial;padding-left: 20px;">
+      <div style="margin-bottom: 7px; font-weight: 600;text-transform: none;font-size: 18px;">Llámanos</div>
+      <div style="font-size: 14px;;text-transform: none;opacity: 0.7;">Contáctanos via whatsapp</div>
     </span>
-    <ion-icon name="arrow-forward-outline" style="margin: 0 21px; font-size: 21px;"></ion-icon>
-  </div>
+    <ion-icon name="arrow-forward-outline" style="font-size: 21px;"></ion-icon>
+  </ion-button>
+
 <!-- 
   <div class="list-menu">
     <ion-card>

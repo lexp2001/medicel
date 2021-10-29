@@ -30,6 +30,18 @@ export class HomePage implements AfterContentChecked, OnInit{
     this.router.navigate(['/main/events/events-details'])
   }
 
+  goProfile() {
+    this.router.navigate(['/main/personal/profile'])
+  }
+
+  goTesting() {
+    this.router.navigate(['/main/testeo'])
+  }
+
+  goCode() {
+    this.router.navigate(['/main/code'])
+  }
+
   ngAfterContentChecked(){
     if (this.swiper) {
       this.swiper.updateSwiper({});
