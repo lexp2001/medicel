@@ -1,24 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/main/home"></ion-back-button>
-    </ion-buttons>
-    <ion-title>
-      Testeo
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button  (click)="goHome()">
-        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="false">
 
+  <div id = "header">
+
+  </div>
+  
 
 
-  <swiper #swiper [config]="config">
+  <swiper #swiper [config]="config" style="margin-right: 20px;">
     <ng-template swiperSlide>
       <ion-card>
        <h3>Datos</h3>

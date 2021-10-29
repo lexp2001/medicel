@@ -16,7 +16,7 @@ export class HomePage implements AfterContentChecked, OnInit{
 
   config: SwiperOptions = {
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 10,
     pagination: true
   };
   participant: any

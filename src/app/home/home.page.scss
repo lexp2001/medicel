@@ -25,7 +25,12 @@ ion-card{
 }
 }
 
-
+#header {
+    min-height: 120px;
+    background-image: url(/assets/images/header01.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
 swiper {
     margin-left: 10px!important;
