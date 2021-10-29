@@ -1,6 +1,6 @@
 <ion-content padding class="background">
   <ion-card class="ion-no-margin" style="border-radius: 0;">
-    <ion-img src="assets/images/header.svg"></ion-img>
+    <ion-img src="/assets/images/header01.jpg"></ion-img>
     <ion-card-content>
       <div class="wrapform">
         <ion-item>
@@ -19,9 +19,16 @@
       <div class="password_forgot">
         <ion-button href="forgotpassword" fill="clear" class="ion-no-padding">¿Olvidaste tu contraseña?</ion-button>
       </div>
-      <div class="sign-btn-wrap">
-        <ion-button (click)="onCLickEnter()" text="" shape="round" fill="solid" class="sgn-btn">Entrar</ion-button>
 
+      <div class="sign-btn-wrap" style="display: flex; justify-content: center;">
+        <div (click)="onCLickEnter()" style="background-color: chocolate;
+        border-radius: 21px;
+        width: min-content;
+        padding: 7px 35px;
+        cursor: pointer;
+        color: whitesmoke;
+        font-weight: 600;">Entrar</div>
+        <!-- <ion-button (click)="onCLickEnter()" text="" shape="round" fill="solid" class="sgn-btn">Entrar</ion-button> -->
       </div>
 
       <div class="text-tag">
