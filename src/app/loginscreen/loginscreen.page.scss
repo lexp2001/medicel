@@ -1,8 +1,11 @@
-
-
-ion-header{
-    position:absolute !important;
+#header {
+    min-height         : 120px;
+    background-image   : url(/assets/images/header01.jpg);
+    background-size    : cover;
+    background-position: center;
 }
+
+
 .wrapform{
     margin-top: 15px;
 }

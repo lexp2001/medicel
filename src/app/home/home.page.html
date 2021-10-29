@@ -8,7 +8,7 @@
 
   <swiper #swiper [config]="config" style="margin: 7px 0; margin-right: 10px;">
     <ng-template swiperSlide>
-      <ion-card style="display: flex; flex-direction: column; align-items: center;">
+      <ion-card style="display: flex; flex-direction: column; align-items: center;" (click)="goProfile()">
         <h3 style="color: chocolate; font-weight: 600;">Datos</h3>
         <div style="color: #707070; margin-bottom: 14px;">Desactualizado</div>
         <ion-icon name="add-circle-outline" style="font-size: 35px; color: #70707084; transform: rotate(45deg);">
@@ -17,7 +17,7 @@
     </ng-template>
 
     <ng-template swiperSlide>
-      <ion-card style="display: flex; flex-direction: column; align-items: center;">
+      <ion-card style="display: flex; flex-direction: column; align-items: center;" (click)="goCovid()">
         <h3 style="color: chocolate; font-weight: 600">Tests</h3>
         <div style="color: #707070; margin-bottom: 14px;">Actualizado</div>
         <ion-icon name="checkmark-circle-outline" style="font-size: 35px; color: #70707084;"></ion-icon>

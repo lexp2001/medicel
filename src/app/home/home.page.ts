@@ -34,6 +34,10 @@ export class HomePage implements AfterContentChecked, OnInit{
     this.router.navigate(['/main/personal/profile'])
   }
 
+  goCovid() {
+    this.router.navigate(['/main/personal/covid'])
+  }
+
   goTesting() {
     this.router.navigate(['/main/testeo'])
   }

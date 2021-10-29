@@ -1,74 +1,61 @@
-<!-- <ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <div class="medicel-home-header" >
-      <ion-img src="assets/images/world.jpg" ></ion-img>
-    </div>
-
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Confirmar Testeo
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button  (click)="goHome()">
+        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <div>
-    <img src="assets/images/world.jpg" style="border-radius:0px 0px 35px 35px !important;" >
+  <div style= "max-height: 241px; overflow: hidden;">
+    <img src="assets/images/maps.jpg" style="border-radius:0px 0px 35px 35px !important;" >
   </div>
-  <div >
-    <ion-title>Conferencia Ambiental</ion-title>
+  <div class="about" style="margin-top: 20px;">
+    <ion-title>Clínica Medicel</ion-title>
+    <p >Luis Carrera 1289, OF 301 Vitacura</p>
+    <p ><b>Tipo de Test</b>: Antígeno</p>
   </div>
 
   <div class="event-name" >
     <div class="div-date">
-      <p>JUL <br> 10</p></div>
+      <p>NOV <br> 11</p></div>
     <div>
       <p>Martes</p>
       <p>10:00 | 12:00PM</p>
     </div>
     <div>
-     <button>Asistir</button>
+     <ion-button color="primary" (click)="goHome()">Confirmar</ion-button>
+     
     </div>
   </div>
 
   <div class="about">
-    <ion-title>Sobre</ion-title>
-    <p>Las conferencias ambientales reúnen a
-      líderes de diferentes países para discutir y...</p>
-    <p class="button-read">Leer mas...</p>
+    <ion-title>No podré asistir</ion-title>
+    <p>Si no puede asistir, explique el motivo y presione el botón "No Asistiré":</p>
+    <ion-item>
+      <ion-textarea></ion-textarea>
+    </ion-item>
   </div>
 
 
   <div class="organizer">
-    <div class="div-organized-logo">
-      <p style="
-      place-self: center ">RV</p>
+
+    <div>
+      &nbsp;
     </div>
     <div>
-      <p>Radio Virtual</p>
-      <p>Organizador</p>
-    </div>
-    <div>
-     <button>Seguir</button>
+      <ion-button color="primary" (click)="goHome()">No Asistiré</ion-button>
     </div>
   </div>
 
-  <div id="maps">
 
-    <ion-img src="assets/images/maps.jpg"></ion-img> 
-  </div>
-
-  <div class="widgets">
-
-    <div class="div-red">
-      <p>Capacidad</p>
-      <p class="p-red">250</p>
-    </div>
-    <div class="div-blue">
-      <p>Inscritos</p>
-      <p class="p-blue">10</p>
-    </div>
-    <div class="div-green">
-      <p>Vacunados</p>
-      <p class="p-green">100%</p>
-    </div>
-
-  </div>
 </ion-content>

@@ -49,6 +49,7 @@ export class LoginscreenPage implements OnInit {
       subscribe(data => {
         console.info(data)
         this.participant["participantData"] = data
+        this.participant["isNew"] = false
         this.router.navigate(['/main/home'])
         this.loadingController.dismiss()
       }, (error) => {
@@ -64,6 +65,13 @@ export class LoginscreenPage implements OnInit {
     })
     
   }
+
+  goUserData(){
+    this.participant["isNew"] = true
+    this.router.navigate(['/main/profile/name'])
+  }
+
+  
 
   ngOnInit() {
     this.participant = this.participantSharedService

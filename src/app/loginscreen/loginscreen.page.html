@@ -1,22 +1,26 @@
 <ion-content padding class="background">
+
+  <div id="header">
+
+  </div>
   <ion-card class="ion-no-margin" style="border-radius: 0;">
-    <ion-img src="/assets/images/header01.jpg"></ion-img>
+    
     <ion-card-content>
-      <div class="wrapform">
+      <div class="wrapform" >
         <ion-item>
 
-          <ion-input type="text" name="userEmail" placeholder="Email" [(ngModel)]="userEmail" required>
+          <ion-input style="font-size: 16px;"type="text" name="userEmail" placeholder="Email" [(ngModel)]="userEmail" required>
             <ion-icon name="mail-outline"></ion-icon>
           </ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input type="password " name="userPass" placeholder="********" [(ngModel)]="userPass" required>
+          <ion-input style="font-size: 16px;" type="password " name="userPass" placeholder="********" [(ngModel)]="userPass" required>
             <ion-icon name="lock-closed-outline"></ion-icon>
           </ion-input>
         </ion-item>
       </div>
-      <div class="password_forgot">
+      <div class="password_forgot" style="margin-top: 30px;">
         <ion-button href="forgotpassword" fill="clear" class="ion-no-padding">¿Olvidaste tu contraseña?</ion-button>
       </div>
 
@@ -31,7 +35,7 @@
         <!-- <ion-button (click)="onCLickEnter()" text="" shape="round" fill="solid" class="sgn-btn">Entrar</ion-button> -->
       </div>
 
-      <div class="text-tag">
+      <!-- <div class="text-tag">
         <span>Puedes entrar usando tus redes sociales</span>
 
       </div>
@@ -43,7 +47,7 @@
         <ion-button fill="clear" class="loginbtn ion-no-padding">
           <ion-img src="assets/images/google.svg"></ion-img>
         </ion-button>
-      </div>
+      </div> -->
 
     </ion-card-content>
 
@@ -51,7 +55,7 @@
 
 
   <div class="ion-card-footer">
-    <span>¿No tienes cuenta?</span><button class="ion-no-padding">Registrate</button>
+    <span>¿No tienes cuenta?</span><button (click)="goUserData()" class="ion-no-padding">Registrate</button>
   </div>
 
 </ion-content>
